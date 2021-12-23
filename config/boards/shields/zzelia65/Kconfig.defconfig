@@ -1,4 +1,4 @@
-if SHIELD_MY_BOARD
+if SHIELD_ZZELIA65
 
 config ZMK_KEYBOARD_NAME
     default "zzelia65"
