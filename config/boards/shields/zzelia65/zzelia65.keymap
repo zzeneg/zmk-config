@@ -1,5 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     keymap {
@@ -25,17 +27,17 @@
 		function_layer {
 			// -----------------------------------------------------------------------------------------------------------------------------------------------
 			// | GRAVE |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   |   F7   |   F8   |   F9   |   F10   |   F11   |   F12   |        |-----| PSCRN |
-			// | TILDE  |        |        |        |        |        |        |        |        |        |         |         |          |      |-----| PAUSE |
-			// |         |         |        |        |        |        |        |        |        |        |         |         |               |-----| PG_UP |
-			// |  ENTER   |         |        |        |        | VOL_UP | VOL_DN |  MUTE  |  PREV  |  NEXT  |   PP    |             |---|   UP   |---| PG_DN |
+			// | TILDE  |  BT 0  |  BT 1  |  BT 2  |  BT 3  |  BT 4  |        |        |        |        |         |         |          |      |-----| PAUSE |
+			// |         | OUT_TOG |        |        |        |        |        |        |        |        |         |         |               |-----| PG_UP |
+			// |  ENTER    | BT_PRV | BT_NXT | BT_CLR |        | VOL_UP | VOL_DN |  MUTE  |  PREV  |  NEXT  |   PP    |             |---|   UP   |---| PG_DN |
 			// |        |        |        |                                                       |       |       |  MENU  |---|  LEFT  |  DOWN  | RIGHT |---|
 			// -----------------------------------------------------------------------------------------------------------------------------------------------
 			bindings = < 
-				&kp GRAVE &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12     &trans          &kp PSCRN
-				&kp TILDE  &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans     &trans          &kp PAUSE_BREAK
-				&trans      &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans   &trans          &trans             &kp PG_UP
-				&kp ENTER    &trans  &trans  &trans  &trans &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_PREV &kp C_NEXT &kp C_PP &trans    &trans     &kp PG_DN
-				&trans   &trans  &trans                           &trans                         &trans   &trans   &kp K_CMENU     &trans  &trans  &trans
+				&kp GRAVE  &kp F1  &kp F2   &kp F3   &kp F4   &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12     &trans          &kp PSCRN
+				&kp TILDE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans &trans     &trans          &kp PAUSE_BREAK
+				&trans    &out OUT_TOG   &trans   &trans   &trans   &trans    &trans    &trans    &trans    &trans    &trans     &trans       &trans            &kp PG_UP
+				&kp ENTER &bt BT_PRV &bt BT_NXT &bt BT_CLR  &trans  &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_PREV &kp C_NEXT &kp C_PP &trans       &trans     &kp PG_DN
+				&trans    &trans    &trans                           &trans                         &trans    &trans    &kp K_CMENU         &trans   &trans   &trans
 			>;
 		};
     };
