@@ -5,11 +5,15 @@
 # the `include` property, e.g:
 #
 # board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
+# shield: [ "pica40_left", "pica40_right" ]
 # include:
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
-board: ['nice_nano_v2']
-shield: ['zzelia65']
+---
+include:
+  - board: seeeduino_xiao_ble
+    shield: pica40_left
+  - board: seeeduino_xiao_ble
+    shield: pica40_right

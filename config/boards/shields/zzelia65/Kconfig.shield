@@ -1,2 +1,0 @@
-config SHIELD_ZZELIA65
-    def_bool $(shields_list_contains,zzelia65)

@@ -1,8 +1,0 @@
-file_format: '1'
-id: zzelia65
-name: zzelia65
-type: shield
-url: https://github.com/zzeneg/zzelia65/
-requires: [pro_micro]
-features:
-  - keys
