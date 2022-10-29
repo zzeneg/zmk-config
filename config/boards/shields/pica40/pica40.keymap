@@ -88,7 +88,7 @@
 
 		nav_layer {
             bindings = <
-                       &none     &bt BT_PRV  &bt BT_NXT  &bt BT_CLR        &none         &none     &kp PG_DN  &kp PG_UP  &none
+                       &none     &none     &none      &none      &none        &none         &none     &kp PG_DN  &kp PG_UP  &none
                 &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp G        &kp LA(UP)    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp INS
                 &none  &none     &none     &none      &none      &none        &kp LA(DOWN)  &kp HOME  &kp END    &none      &none      &none
                                                      &none  &none  &none    &none  &trans  &none
@@ -115,9 +115,9 @@
 
 		function_layer {
             bindings = <
-                           &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN              &none  &none      &none      &none     &none
-                &kp LCTRL  &kp F11  &kp F4  &kp F5  &kp F6  &kp PAUSE_BREAK        &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
-                &kp ENTER  &kp F10  &kp F1  &kp F2  &kp F3  &kp CAPS               &none  &none      &none      &none     &none     &none
+                           &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN              &bt BT_CLR  &none      &bt BT_NXT  &none     &none
+                &kp LCTRL  &kp F11  &kp F4  &kp F5  &kp F6  &kp PAUSE_BREAK        &none       &kp RSHFT  &kp RCTRL   &kp LALT  &kp RGUI  &none
+                &kp ENTER  &kp F10  &kp F1  &kp F2  &kp F3  &kp CAPS               &none       &none      &none       &none     &none     &none
                                                  &trans  &kp C_NEXT  &kp C_PP    &trans  &none  &none
                 >;
         };

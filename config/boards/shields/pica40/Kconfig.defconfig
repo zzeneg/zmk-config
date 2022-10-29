@@ -1,10 +1,10 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_PICA40_RIGHT
+if SHIELD_PICA40_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "pica40"
+	default "pica40v2"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
