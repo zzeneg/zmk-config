@@ -11,39 +11,62 @@
 #define FUNC 5
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <160>;
+    flavor = "tap-preferred";
+};
+
+&lt {
+    tapping-term-ms = <160>;
     flavor = "tap-preferred";
 };
 
 / {
 
-	behaviors {
-		hm: homerow_mods {
+    behaviors {
+        hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <160>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        am: alpha_mods {
+        hr: homerow_mods_ring_finger {
             compatible = "zmk,behavior-hold-tap";
-            label = "ALPHA_MT";
+            label = "HOMEROW_MODS_RING_FINGER";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        as: alpha_shift {
+        hp: homerow_mods_pinky_finger {
             compatible = "zmk,behavior-hold-tap";
-            label = "ALPHA_SFT";
+            label = "HOMEROW_MODS_PINKY_FINGER";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        tm: thumb_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <160>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        lh: layer_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_HOLD";
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <160>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
         };
 
         // Easy alt-tab with alt+backspace thumb using mod-morphs
@@ -64,29 +87,41 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <14 17>;
+            layers = <0>;
+            bindings = <&caps_word>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-		default_layer {
+        default_layer {
             bindings = <
                            &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y  &kp U        &kp I        &kp O       &kp P
-                &kp EQUAL  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H  &hm RSHFT J  &hm RCTRL K  &hm LALT L  &hm RGUI SEMI  &kp SQT
+                &kp EQUAL  &hp LGUI A  &hr LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H  &hm RSHFT J  &hm RCTRL K  &hr LALT L  &hp RGUI SEMI  &kp SQT
                 &kp MINUS  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp GRAVE
-                                            &lt SYM ESC  &lt NUM TAB  &lt FUNC SPACE    &lt FUNC ENTER  &lt NAV BSPC  &hm RALT DEL
+                                            &lt FUNC ESC  &lt NUM TAB  &lh SYM SPACE    &lt FUNC ENTER  &lh NAV BSPC  &tm RALT DEL
                 >;
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-		game_layer {
+        game_layer {
             bindings = <
                                  &kp Q   &kp W  &kp E  &kp R  &kp T        &kp Y  &kp U  &kp I      &kp O    &kp P
                 &hm LALT EQUAL   &kp A   &kp S  &kp D  &kp F  &kp G        &kp H  &kp J  &kp K      &kp L    &kp SEMI  &hm LGUI SQT
                 &hm LSHFT MINUS  &kp Z   &kp X  &kp C  &kp V  &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &tog GAME
-                           &hm LCTRL ESC  &lt NUM TAB  &lt FUNC SPACE    &lt FUNC ENTER  &lt NAV BSPC  &hm RALT DEL
+                            &hm LCTRL ESC  &lt NUM TAB  &lh SYM SPACE    &lt FUNC ENTER  &lh NAV BSPC  &tm RALT DEL
                 >;
         };
 
-		nav_layer {
+        nav_layer {
             bindings = <
                        &none     &none     &none      &none      &none        &none         &none     &kp PG_DN  &kp PG_UP  &none
                 &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp G        &kp LA(UP)    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp INS
@@ -95,7 +130,7 @@
                 >;
         };
 
-		number_layer {
+        number_layer {
             bindings = <
                            &kp BSLH   &kp N7  &kp N8  &kp N9  &kp N0          &none  &none      &none      &none     &none
                 &kp LCTRL  &kp COMMA  &kp N4  &kp N5  &kp N6  &kp LBKT        &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
@@ -104,7 +139,7 @@
                 >;
         };
 
-		symbol_layer {
+        symbol_layer {
             bindings = <
                            &kp PIPE  &kp AMPS  &kp STAR   &kp LPAR   &kp RPAR        &none  &none      &none      &none     &none
                 &kp LCTRL  &kp LT    &kp DLLR  &kp PRCNT  &kp CARET  &kp LBRC        &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
@@ -113,7 +148,7 @@
                 >;
         };
 
-		function_layer {
+        function_layer {
             bindings = <
                            &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN              &bt BT_CLR  &none      &bt BT_NXT  &none     &none
                 &kp LCTRL  &kp F11  &kp F4  &kp F5  &kp F6  &kp PAUSE_BREAK        &none       &kp RSHFT  &kp RCTRL   &kp LALT  &kp RGUI  &none
