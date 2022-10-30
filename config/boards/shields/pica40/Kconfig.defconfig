@@ -4,7 +4,7 @@
 if SHIELD_PICA40_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "pica40v2"
+	default "pica40"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
