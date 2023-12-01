@@ -1,10 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SETTINGS_RESET
+if SHIELD_DUET
 
 config ZMK_KEYBOARD_NAME
-	default "SETTINGS RESET"
+    default "QAZ"
 
 endif
-

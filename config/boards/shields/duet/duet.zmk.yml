@@ -1,0 +1,9 @@
+file_format: '1'
+id: duet
+name: duet
+type: shield
+url: https://github.com/zzeneg/duet
+requires: [pro_micro]
+features:
+  - keys
+  - display
