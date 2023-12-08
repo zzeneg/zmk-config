@@ -44,6 +44,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <160>;
             quick-tap-ms = <0>;
+            require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -53,6 +54,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
+            require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -62,6 +64,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
+            require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -80,16 +83,12 @@
         m_email: m_email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
             bindings = <&kp Z &kp Z  &kp E &kp N &kp E &kp G &kp Z &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
 
         m_arrow: m_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
             bindings = <&kp EQUAL &kp GT>;
         };
     };
@@ -120,7 +119,7 @@
         eu_layer {
             bindings = <
                           &trans       &trans      &kp RA(E)    &kp R        &trans            &trans       &kp RA(U)    &trans      &kp RA(O)    &trans 
-                &trans    &kp RA(A)    &kp RA(S)   &kp LC(C)    &kp LSHFT    &trans            &m_email     &kp RSHFT    &m_arrow    &hr RA(L)    &trans       &trans
+                &trans    &kp RA(A)    &kp RA(S)   &kp LC(C)    &kp LSHFT    &trans            &m_email     &kp RSHFT    &m_arrow    &kp RA(L)   &trans       &trans
                 &trans    &kp RA(Z)    &kp RA(X)   &kp RA(C)    &kp LC(V)    &trans            &kp RA(N)    &trans       &trans      &trans       &trans       &trans
                                                      &lt FUNC ESC   &trans     &trans       &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &trans
@@ -129,9 +128,9 @@
 
         nav_layer {
             bindings = <
-                          &none       &none        &none        &none        &none            &none         &none        &kp INS      &kp K_APP    &none
+                          &none       &none        &none        &none        &none            &none         &none        &kp PG_DN    &kp PG_UP    &none
                 &none     &kp LGUI    &kp LALT     &kp LCTRL    &kp LSHFT    &none            &kp LA(UP)    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp PAUSE_BREAK
-                &none     &none       &none        &none        &none        &none            &kp LA(DOWN)  &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none
+                &none     &none       &none        &none        &none        &none            &kp LA(DOWN)  &kp HOME     &kp END      &kp INS      &kp K_APP    &none
                                                         &trans     &trans     &trans        &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                         &trans  &trans  &trans  &trans  &trans
             >;
