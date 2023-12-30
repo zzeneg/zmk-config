@@ -27,6 +27,10 @@
     tapping-term-ms = <150>;
 };
 
+&encoder {
+    status = "okay";
+};
+
 / {
     behaviors {
         hi: homerow_mods_index_finger {
@@ -104,6 +108,8 @@
                                               &lt FUNC ESC  &lt NUM TAB  &lt SYM SPACE       &lt FUNC ENTER  &lt NAV BSPC  &lt EU DEL
                 &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none                                                          &none  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         game_layer {
@@ -177,5 +183,4 @@
         };
 
     };
-
 };
