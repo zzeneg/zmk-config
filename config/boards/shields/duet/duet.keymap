@@ -35,7 +35,6 @@
     behaviors {
         hi: homerow_mods_index_finger {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_INDEX_FINGER";
             #binding-cells = <2>;
             tapping-term-ms = <140>;
             quick-tap-ms = <0>;
@@ -44,7 +43,6 @@
         };
         hm: homerow_mods_middle_finger {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_INDEX_FINGER";
             #binding-cells = <2>;
             tapping-term-ms = <160>;
             quick-tap-ms = <0>;
@@ -54,7 +52,6 @@
         };
         hr: homerow_mods_ring_finger {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RING_FINGER";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
@@ -64,7 +61,6 @@
         };
         hp: homerow_mods_pinky_finger {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_PINKY_FINGER";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
@@ -74,7 +70,6 @@
         };
         lh: layer_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_HOLD";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
