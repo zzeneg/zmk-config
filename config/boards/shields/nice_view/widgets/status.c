@@ -19,13 +19,13 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/events/battery_state_changed.h>
 #include <zmk/events/ble_active_profile_changed.h>
 #include <zmk/events/endpoint_changed.h>
-#include <zmk/events/wpm_state_changed.h>
+// #include <zmk/events/wpm_state_changed.h>
 #include <zmk/events/layer_state_changed.h>
 #include <zmk/usb.h>
 #include <zmk/ble.h>
 #include <zmk/endpoints.h>
 #include <zmk/keymap.h>
-#include <zmk/wpm.h>
+// #include <zmk/wpm.h>
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -87,37 +87,37 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
 
     lv_canvas_draw_text(canvas, 0, 0, CANVAS_SIZE, &label_dsc, output_text);
 
-    // Draw WPM
-    lv_canvas_draw_rect(canvas, 0, 21, 68, 42, &rect_white_dsc);
-    lv_canvas_draw_rect(canvas, 1, 22, 66, 40, &rect_black_dsc);
+    // // Draw WPM
+    // lv_canvas_draw_rect(canvas, 0, 21, 68, 42, &rect_white_dsc);
+    // lv_canvas_draw_rect(canvas, 1, 22, 66, 40, &rect_black_dsc);
 
-    char wpm_text[6] = {};
-    snprintf(wpm_text, sizeof(wpm_text), "%d", state->wpm[9]);
-    lv_canvas_draw_text(canvas, 42, 52, 24, &label_dsc_wpm, wpm_text);
+    // char wpm_text[6] = {};
+    // snprintf(wpm_text, sizeof(wpm_text), "%d", state->wpm[9]);
+    // lv_canvas_draw_text(canvas, 42, 52, 24, &label_dsc_wpm, wpm_text);
 
-    int max = 0;
-    int min = 256;
+    // int max = 0;
+    // int min = 256;
 
-    for (int i = 0; i < 10; i++) {
-        if (state->wpm[i] > max) {
-            max = state->wpm[i];
-        }
-        if (state->wpm[i] < min) {
-            min = state->wpm[i];
-        }
-    }
+    // for (int i = 0; i < 10; i++) {
+    //     if (state->wpm[i] > max) {
+    //         max = state->wpm[i];
+    //     }
+    //     if (state->wpm[i] < min) {
+    //         min = state->wpm[i];
+    //     }
+    // }
 
-    int range = max - min;
-    if (range == 0) {
-        range = 1;
-    }
+    // int range = max - min;
+    // if (range == 0) {
+    //     range = 1;
+    // }
 
-    lv_point_t points[10];
-    for (int i = 0; i < 10; i++) {
-        points[i].x = 2 + i * 7;
-        points[i].y = 60 - (state->wpm[i] - min) * 36 / range;
-    }
-    lv_canvas_draw_line(canvas, points, 10, &line_dsc);
+    // lv_point_t points[10];
+    // for (int i = 0; i < 10; i++) {
+    //     points[i].x = 2 + i * 7;
+    //     points[i].y = 60 - (state->wpm[i] - min) * 36 / range;
+    // }
+    // lv_canvas_draw_line(canvas, points, 10, &line_dsc);
 
     // Rotate canvas
     rotate_canvas(canvas, cbuf);
@@ -143,11 +143,11 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     lv_canvas_draw_rect(canvas, 0, 0, CANVAS_SIZE, CANVAS_SIZE, &rect_black_dsc);
 
     // Draw circles
-    int circle_offsets[5][2] = {
-        {13, 13}, {55, 13}, {34, 34}, {13, 55}, {55, 55},
+    int circle_offsets[2][2] = {
+        {13, 13}, {55, 13}
     };
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 2; i++) {
         bool selected = i == state->active_profile_index;
 
         lv_canvas_draw_arc(canvas, circle_offsets[i][0], circle_offsets[i][1], 13, 0, 359,
@@ -303,9 +303,9 @@ struct wpm_status_state wpm_status_get_state(const zmk_event_t *eh) {
     return (struct wpm_status_state){.wpm = zmk_wpm_get_state()};
 };
 
-ZMK_DISPLAY_WIDGET_LISTENER(widget_wpm_status, struct wpm_status_state, wpm_status_update_cb,
-                            wpm_status_get_state)
-ZMK_SUBSCRIPTION(widget_wpm_status, zmk_wpm_state_changed);
+// ZMK_DISPLAY_WIDGET_LISTENER(widget_wpm_status, struct wpm_status_state, wpm_status_update_cb,
+//                             wpm_status_get_state)
+// ZMK_SUBSCRIPTION(widget_wpm_status, zmk_wpm_state_changed);
 
 int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     widget->obj = lv_obj_create(parent);
@@ -324,7 +324,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     widget_battery_status_init();
     widget_output_status_init();
     widget_layer_status_init();
-    widget_wpm_status_init();
+    // widget_wpm_status_init();
 
     return 0;
 }
