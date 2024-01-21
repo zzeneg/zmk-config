@@ -44,9 +44,9 @@
         hm: homerow_mods_middle_finger {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <170>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <70>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -55,7 +55,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <70>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -82,7 +82,9 @@
         m_email: m_email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Z &kp Z  &kp E &kp N &kp E &kp G &kp Z &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Z &kp Z  &kp E &kp N &kp E &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
 
         m_arrow: m_arrow {
@@ -96,6 +98,8 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "BASE";
+
             bindings = <
                            &kp GRAVE   &kp W       &kp E         &kp R        &kp T            &kp Y      &kp U        &kp I        &kp O       &kp SQT
                 &kp Q      &hp LGUI A  &hr LALT S  &hm LCTRL D   &hi LSHFT F  &kp G            &kp H      &hi RSHFT J  &hm RCTRL K  &hr LALT L  &hp RGUI P  &kp SEMI
@@ -108,6 +112,8 @@
         };
 
         game_layer {
+            display-name = "GAME";
+
             bindings = < 
                                  &kp GRAVE   &kp W      &kp E      &kp R      &kp T            &kp Y       &kp U       &kp I        &kp O        &kp SQT
                 &mt LALT Q       &kp A       &kp S      &kp D      &kp F      &kp G            &kp H       &kp J       &kp K        &kp L        &kp P       &kp SEMI
@@ -118,6 +124,8 @@
         };
 
         eu_layer {
+            display-name = "EU";
+
             bindings = <
                           &trans       &trans      &kp RA(E)    &kp R        &trans            &trans       &kp RA(U)    &trans      &kp RA(O)    &trans 
                 &trans    &kp RA(A)    &kp RA(S)   &kp LC(C)    &kp LSHFT    &trans            &m_email     &kp RSHFT    &m_arrow    &kp RA(L)    &trans       &trans
@@ -128,6 +136,8 @@
         };
 
         nav_layer {
+            display-name = "NAV";
+
             bindings = <
                           &none       &none        &none        &none        &none            &none         &none        &kp PG_DN    &kp PG_UP    &none
                 &none     &kp LGUI    &kp LALT     &kp LCTRL    &kp LSHFT    &none            &kp LA(UP)    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp PAUSE_BREAK
@@ -138,6 +148,8 @@
         };
 
         num_layer {
+            display-name = "NUM";
+
             bindings = <
                            &kp EQUAL   &kp N7      &kp N8      &kp N9      &kp PLUS           &none        &none        &none        &none        &none
                 &kp AT     &kp N0      &kp N4      &kp N5      &kp N6      &kp DOT            &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI     &none
@@ -148,6 +160,8 @@
         };
 
         sym_layer {
+            display-name = "SYM";
+
             bindings = <
                             &kp DOLLAR  &kp PRCNT   &kp PLUS    &kp LBRC    &kp RBRC           &none        &none        &none        &none        &none
                 &kp PIPE    &kp AMPS    &kp EXCL    &kp EQUAL   &kp LPAR    &kp RPAR           &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
@@ -158,6 +172,8 @@
         };
 
         func_layer {
+            display-name = "FUNC";
+
             bindings = <
                            &kp F12     &kp F7      &kp F8      &kp F9      &kp TILDE           &none        &none        &none        &none        &none
                 &kp LCTRL  &kp F11     &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
@@ -171,8 +187,8 @@
             bindings = <
                               &bootloader   &none         &none         &ext_power EP_ON  &ext_power EP_OFF           &none       &none       &none       &none       &none
                 &out OUT_BLE  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_SEL 5                &none       &none       &none       &none       &none      &none
-                &out OUT_TOG  &none         &none         &none         &none             &bootloader                 &none       &none       &none       &none       &none      &none
-                                                                                 &trans     &none     &trans        &trans      &trans     &trans
+                &out OUT_TOG  &none         &none         &none         &none             &none                       &none       &none       &none       &none       &none      &none
+                                                                           &trans     &bootloader     &trans        &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                                          &trans  &trans  &trans  &trans  &trans
             >;
         };
