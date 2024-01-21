@@ -29,7 +29,7 @@ config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
 
 config NICE_VIEW_WIDGET_STATUS
     bool "Custom nice!view status widget"
-    select LV_FONT_MONTSERRAT_16
+    select LV_FONT_MONTSERRAT_18
     select LV_USE_IMG
     select LV_USE_CANVAS
 
@@ -39,10 +39,8 @@ config NICE_VIEW_WIDGET_INVERTED
 if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
 config NICE_VIEW_WIDGET_STATUS
+    select LV_FONT_MONTSERRAT_22
     select LV_FONT_MONTSERRAT_18
-    select LV_FONT_MONTSERRAT_14
-    select LV_FONT_UNSCII_8
-    select ZMK_WPM
 
 endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
