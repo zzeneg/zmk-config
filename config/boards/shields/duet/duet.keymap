@@ -19,6 +19,10 @@
 #define FUNC 6
 #define SYS 7
 
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27  // left-hand keys
+#define KEYS_R 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33  // right-hand keys
+#define THUMBS 34 35 36 37 38 39
+
 &lt {
     tapping-term-ms = <150>;
 };
@@ -33,48 +37,49 @@
 
 / {
     behaviors {
-        hi: homerow_mods_index_finger {
+        hsl: homerow_shift_l {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
         };
-        hm: homerow_mods_middle_finger {
+        hsr: homerow_shift_r {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <70>;
-            flavor = "tap-preferred";
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
         };
-        hr: homerow_mods_ring_finger {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <70>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        hp: homerow_mods_pinky_finger {
+        hml: homerow_mods_l {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             require-prior-idle-ms = <100>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
         };
-        lh: layer_hold {
+        hmr: homerow_mods_r {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <100>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
         };
     };
 
@@ -94,6 +99,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <14 17>;
+            bindings = <&caps_word>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -101,10 +115,10 @@
             display-name = "BASE";
 
             bindings = <
-                           &kp GRAVE   &kp W       &kp E         &kp R        &kp T            &kp Y      &kp U        &kp I        &kp O       &kp SQT
-                &kp Q      &hp LGUI A  &hr LALT S  &hm LCTRL D   &hi LSHFT F  &kp G            &kp H      &hi RSHFT J  &hm RCTRL K  &hr LALT L  &hp RGUI P  &kp SEMI
-                &kp MINUS  &kp Z       &kp X       &kp C         &kp V        &kp B            &kp N      &kp M        &kp COMMA    &kp DOT     &kp SLASH   &kp SQT
-                                              &lt FUNC ESC  &lt NUM TAB  &lt SYM SPACE       &lt FUNC ENTER  &lt NAV BSPC  &lt EU DEL
+                           &kp GRAVE    &kp W        &kp E         &kp R         &kp T            &kp Y      &kp U         &kp I         &kp O        &kp SQT
+                &kp Q      &hml LGUI A  &hml LALT S  &hml LCTRL D  &hsl LSHFT F  &kp G            &kp H      &hsr RSHFT J  &hmr RCTRL K  &hmr LALT L  &hmr RGUI P  &kp SEMI
+                &kp MINUS  &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH    &kp SQT
+                                                &lt FUNC ESC  &lt NUM TAB  &lt SYM SPACE       &lt FUNC ENTER  &lt NAV BSPC  &lt EU DEL
                 &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none                                                          &none  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
             >;
 
