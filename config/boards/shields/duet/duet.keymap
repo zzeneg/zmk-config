@@ -40,7 +40,7 @@
         hsl: homerow_shift_l {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             require-prior-idle-ms = <50>;
             flavor = "balanced";
@@ -51,7 +51,7 @@
         hsr: homerow_shift_r {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             require-prior-idle-ms = <50>;
             flavor = "balanced";
@@ -199,10 +199,10 @@
 
         sys_layer {
             bindings = <
-                              &bootloader   &none         &none         &ext_power EP_ON  &ext_power EP_OFF           &none       &none       &none       &none       &none
-                &out OUT_BLE  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_SEL 5                &none       &none       &none       &none       &none      &none
-                &out OUT_TOG  &none         &none         &none         &none             &none                       &none       &none       &none       &none       &none      &none
-                                                                           &trans     &bootloader     &trans        &trans      &trans     &trans
+                              &none         &none         &none        &none   &ext_power EP_OFF           &none       &none       &none       &none       &none
+                &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &none        &none   &ext_power EP_ON            &none       &none       &none       &none       &none      &none
+                &out OUT_TOG  &none         &none         &bt BT_CLR   &none   &none                       &none       &none       &none       &none       &none      &none
+                                                                &trans     &bootloader     &trans        &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                                          &trans  &trans  &trans  &trans  &trans
             >;
         };
