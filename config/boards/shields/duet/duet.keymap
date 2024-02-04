@@ -192,10 +192,12 @@
         };
 
         sys_layer {
+            display-name = "SYS";
+
             bindings = <
                               &none         &none         &none        &none   &ext_power EP_OFF           &none       &none       &none       &none       &none
                 &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &none        &none   &ext_power EP_ON            &none       &none       &none       &none       &none      &none
-                &out OUT_TOG  &none         &none         &bt BT_CLR   &none   &none                       &none       &none       &none       &none       &none      &none
+                &out OUT_USB  &none         &none         &bt BT_CLR   &none   &none                       &none       &none       &none       &none       &none      &none
                                                                 &trans     &bootloader     &trans        &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                                          &trans  &trans  &trans  &trans  &trans
             >;
