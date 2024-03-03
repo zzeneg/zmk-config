@@ -1,0 +1,330 @@
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '='
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: LALT}
+  - {t: ;, h: RGUI}
+  - ''''
+  - '-'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - '`'
+  - {t: ESC, h: func}
+  - {t: TAB, h: num}
+  - {t: SPACE, h: sym}
+  - {t: ENTER, h: func}
+  - {t: BSPC, h: nav}
+  - {t: DEL, h: eu}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ''
+  - ''
+  eu:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RA(E)
+  - R
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RA(U)
+  - {t: ▽, type: trans}
+  - RA(O)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RA(A)
+  - RA(S)
+  - LC(C)
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RSHFT
+  - '&m_arrow'
+  - RA(L)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RA(Z)
+  - RA(X)
+  - RA(C)
+  - LC(V)
+  - {t: ▽, type: trans}
+  - RA(N)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ESC, h: func}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  nav:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - PG DN
+  - PG UP
+  - ''
+  - ''
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - LA(UP)
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - PAUSE BREAK
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LA(DOWN)
+  - HOME
+  - END
+  - INS
+  - APP
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  num:
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - '['
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LCTRL
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - ']'
+  - ''
+  - RSHFT
+  - RCTRL
+  - LALT
+  - RGUI
+  - ''
+  - LSHFT
+  - BSPC
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ENTER
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sym:
+  - ''
+  - '&'
+  - '*'
+  - (
+  - '}'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LCTRL
+  - )
+  - $
+  - '%'
+  - ^
+  - )
+  - ''
+  - RSHFT
+  - RCTRL
+  - LALT
+  - RGUI
+  - ''
+  - LSHFT
+  - BSPC
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - sys
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  func:
+  - F12
+  - F7
+  - F8
+  - F9
+  - '~'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LCTRL
+  - F11
+  - F4
+  - F5
+  - F6
+  - F12
+  - ''
+  - RSHFT
+  - RCTRL
+  - LALT
+  - RGUI
+  - ''
+  - LSHFT
+  - F10
+  - F3
+  - F2
+  - F1
+  - CAPS
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - NEXT
+  - PP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sys:
+  - '&bootloader'
+  - ''
+  - ''
+  - EP ON
+  - EP OFF
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - OUT BLE
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: BT, h: '5'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - OUT TOG
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
