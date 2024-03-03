@@ -55,6 +55,28 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        hcl: homerow_ctrl_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+        hcr: homerow_ctrl_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
         hml: homerow_mods_l {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -110,11 +132,11 @@
             display-name = "BASE";
 
             bindings = <
-                           &kp GRAVE    &kp W        &kp E         &kp R         &kp T            &kp Y      &kp U         &kp I         &kp O        &kp SQT
-                &kp Q      &hml LGUI A  &hml LALT S  &hml LCTRL D  &hsl LSHFT F  &kp G            &kp H      &hsr RSHFT J  &hmr RCTRL K  &hmr LALT L  &hmr RGUI P  &kp SEMI
+                           &kp GRAVE    &kp W        &kp E         &kp R         &kp T            &kp Y      &kp U         &kp I         &kp O        &kp EQUAL
+                &kp Q      &hml LGUI A  &hml LALT S  &hcl LCTRL D  &hsl LSHFT F  &kp G            &kp H      &hsr RSHFT J  &hcr RCTRL K  &hmr LALT L  &hmr RGUI P  &kp SEMI
                 &kp MINUS  &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH    &kp SQT
-                                                &lt FUNC ESC  &lt NUM TAB  &lt SYM SPACE       &lt FUNC ENTER  &lt NAV BSPC  &lt EU DEL
-                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none                                                          &none  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+                                                 &lt FUNC ESC  &lt NUM TAB  &lt SYM SPACE       &lt FUNC ENTER  &lt NAV BSPC  &lt EU DEL
+                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none                                                                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -124,11 +146,11 @@
             display-name = "GAME";
 
             bindings = < 
-                                 &kp GRAVE   &kp W      &kp E      &kp R      &kp T            &kp Y       &kp U       &kp I        &kp O        &kp SQT
+                                 &kp GRAVE   &kp W      &kp E      &kp R      &kp T            &kp Y       &kp U       &kp I        &kp O        &kp EQUAL
                 &mt LALT Q       &kp A       &kp S      &kp D      &kp F      &kp G            &kp H       &kp J       &kp K        &kp L        &kp P       &kp SEMI
-                &mt LSHFT MINUS  &kp Z       &kp X      &kp C      &kp V      &kp B            &kp N       &kp M       &kp COMMA    &kp DOT      &kp SLASH   &mt LGUI APOS
+                &mt LSHFT MINUS  &kp Z       &kp X      &kp C      &kp V      &kp B            &kp N       &kp M       &kp COMMA    &kp DOT      &kp SLASH   &mt LGUI SQT
                                                    &mt LCTRL ESC    &trans     &trans        &trans     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                         &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                                                                              &trans
             >;
         };
 
@@ -136,11 +158,11 @@
             display-name = "EU";
 
             bindings = <
-                          &trans       &trans      &kp RA(E)    &kp R        &trans            &trans       &kp RA(U)    &trans      &kp RA(O)    &trans 
-                &trans    &kp RA(A)    &kp RA(S)   &kp LC(C)    &kp LSHFT    &trans            &m_email     &kp RSHFT    &m_arrow    &kp RA(L)    &trans       &trans
-                &trans    &kp RA(Z)    &kp RA(X)   &kp RA(C)    &kp LC(V)    &trans            &kp RA(N)    &trans       &trans      &trans       &trans       &trans
+                          &trans       &trans      &kp RA(E)    &trans       &trans            &trans       &kp RA(U)    &trans      &kp RA(O)    &trans 
+                &trans    &kp RA(A)    &kp RA(S)   &trans       &kp LSHFT    &trans            &m_email     &kp RSHFT    &m_arrow    &kp RA(L)    &trans       &trans
+                &trans    &kp RA(Z)    &kp RA(X)   &kp RA(C)    &trans       &trans            &kp RA(N)    &trans       &trans      &trans       &trans       &trans
                                                      &lt FUNC ESC   &trans     &trans       &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &trans
+                &trans  &trans  &trans  &trans  &trans                                                                               &trans
             >;
         };
 
@@ -152,7 +174,7 @@
                 &none     &kp LGUI    &kp LALT     &kp LCTRL    &kp LSHFT    &none            &kp LA(UP)    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp PAUSE_BREAK
                 &none     &none       &none        &none        &none        &none            &kp LA(DOWN)  &kp HOME     &kp END      &kp INS      &kp K_APP    &none
                                                         &trans     &trans     &trans        &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                         &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
 
@@ -164,7 +186,7 @@
                 &kp AT     &kp N0      &kp N4      &kp N5      &kp N6      &kp DOT            &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI     &none
                 &kp BSPC   &kp SLASH   &kp N1      &kp N2      &kp N3      &kp STAR           &none        &none        &none        &none        &none        &none
                                                    &kp ENTER     &trans     &tog GAME       &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                        &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                                                                               &trans
             >;
         };
 
@@ -176,7 +198,7 @@
                 &kp PIPE    &kp AMPS    &kp EXCL    &kp EQUAL   &kp LPAR    &kp RPAR           &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
                 &kp CARET   &kp BSLH    &kp HASH    &kp STAR    &kp LBKT    &kp RBKT           &none        &none        &none        &none        &none       &none
                                                          &mo SYS     &trans     &trans       &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                        &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
 
@@ -184,11 +206,11 @@
             display-name = "FUNC";
 
             bindings = <
-                           &kp F12     &kp F7      &kp F8      &kp F9      &kp TILDE           &none        &none        &none        &none        &none
-                &kp LCTRL  &kp F11     &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
-                &kp LSHFT  &kp F10     &kp F3      &kp F2      &kp F1      &kp CAPS            &none        &none        &none        &none        &none       &none
+                           &none       &kp F7      &kp F8      &kp F9      &kp F11             &none        &none        &none        &none        &none
+                &kp LCTRL  &kp F10     &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
+                &kp LSHFT  &none       &kp F1      &kp F2      &kp F3      &kp CAPS            &none        &none        &none        &none        &none       &none
                                                     &trans     &kp C_NEXT     &kp C_PP       &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                        &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
 
@@ -196,11 +218,11 @@
             display-name = "SYS";
 
             bindings = <
-                              &none         &none         &none         &none   &ext_power EP_OFF           &none       &none       &none       &none       &none
-                &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none   &ext_power EP_ON            &none       &none       &none       &none       &none      &none
-                &out OUT_USB  &none         &none         &bt BT_CLR    &none   &none                       &none       &none       &none       &none       &none      &none
-                                                                &trans     &bootloader     &trans        &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                                          &trans  &trans  &trans  &trans  &trans
+                              &none         &none         &none         &ext_power EP_ON   &ext_power EP_OFF           &none       &none       &none       &none       &none
+                &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none              &none                       &none       &none       &none       &none       &none      &none
+                &out OUT_USB  &none         &none         &bt BT_CLR    &none              &bootloader                 &none       &none       &none       &none       &none      &none
+                                                                                  &trans     &none     &trans        &trans      &trans     &trans
+                &trans  &trans  &trans  &trans  &trans                                                                                                     &trans
             >;
         };
 

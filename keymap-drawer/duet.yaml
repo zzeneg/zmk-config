@@ -1,6 +1,6 @@
 layers:
-  default:
-  - Q
+  BASE:
+  - '`'
   - W
   - E
   - R
@@ -9,8 +9,8 @@ layers:
   - U
   - I
   - O
-  - P
   - '='
+  - Q
   - {t: A, h: Gui}
   - {t: S, h: Alt}
   - {t: D, h: Ctrl}
@@ -20,8 +20,8 @@ layers:
   - {t: J, h: Shift}
   - {t: K, h: Ctrl}
   - {t: L, h: Alt}
-  - {t: ;, h: Gui}
-  - ''''
+  - {t: P, h: Gui}
+  - ;
   - '-'
   - Z
   - X
@@ -33,24 +33,71 @@ layers:
   - ','
   - .
   - /
-  - '`'
-  - {t: Esc, h: func}
-  - {t: ↹, h: num}
-  - {t: ␣, h: sym}
-  - {t: ⏎, h: func}
-  - {t: ⌫, h: nav}
-  - {t: ⌦, h: eu}
+  - ''''
+  - {t: Esc, h: FUNC}
+  - {t: ↹, h: NUM}
+  - {t: ␣, h: SYM}
+  - {t: ⏎, h: FUNC}
+  - {t: ⌫, h: NAV}
+  - {t: ⌦, h: EU}
   - ←
   - ↓
   - ↑
   - →
   - ''
   - ''
-  eu:
+  GAME:
+  - '`'
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - '='
+  - {t: Q, h: Alt}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - P
+  - ;
+  - {t: '-', h: Shift}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: '''', h: Gui}
+  - {t: Esc, h: Ctrl}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  EU:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ę
-  - R
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - €
@@ -63,7 +110,7 @@ layers:
   - {t: ▽, type: trans}
   - Shift
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - email
   - Shift
   - =>
   - Ł
@@ -81,7 +128,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: Esc, h: FUNC}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -93,7 +140,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  nav:
+  NAV:
   - ''
   - ''
   - ''
@@ -140,89 +187,89 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  num:
-  - ⏎
+  NUM:
+  - '='
   - '7'
   - '8'
   - '9'
-  - '['
+  - +
   - ''
   - ''
   - ''
   - ''
   - ''
-  - Ctrl
+  - '@'
   - '0'
   - '4'
   - '5'
   - '6'
-  - ']'
+  - .
   - ''
   - Shift
   - Ctrl
   - Alt
   - Gui
   - ''
-  - Shift
   - ⌫
+  - /
   - '1'
   - '2'
   - '3'
-  - \
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  sym:
-  - ⏎
-  - '&'
   - '*'
-  - (
-  - '{'
   - ''
   - ''
   - ''
   - ''
   - ''
-  - Ctrl
-  - )
+  - ''
+  - ⏎
+  - {type: held}
+  - {t: GAME, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SYM:
   - $
   - '%'
-  - ^
+  - +
+  - '{'
   - '}'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '|'
+  - '&'
+  - '!'
+  - '='
+  - (
+  - )
   - ''
   - Shift
   - Ctrl
   - Alt
   - Gui
   - ''
-  - Shift
-  - ⌫
-  - '!'
-  - '@'
+  - ^
+  - \
   - '#'
-  - '|'
+  - '*'
+  - '['
+  - ']'
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - sys
+  - SYS
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -234,7 +281,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  func:
+  FUNC:
   - ''
   - F7
   - F8
@@ -281,7 +328,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  sys:
+  SYS:
   - ''
   - ''
   - ''
@@ -296,18 +343,18 @@ layers:
   - BT 1
   - BT 2
   - BT 3
-  - BT 4
-  - BT 5
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - Out TOG
   - ''
   - ''
+  - Out USB
   - ''
+  - ''
+  - BT clear
   - ''
   - Boot
   - ''
@@ -331,5 +378,5 @@ layers:
 combos:
 - p: [14, 17]
   k: Caps Word
-  l: [default]
+  l: [BASE]
   a: top
