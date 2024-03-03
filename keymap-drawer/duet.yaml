@@ -1,0 +1,335 @@
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '='
+  - {t: A, h: Gui}
+  - {t: S, h: Alt}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Shift}
+  - G
+  - H
+  - {t: J, h: Shift}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Alt}
+  - {t: ;, h: Gui}
+  - ''''
+  - '-'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - '`'
+  - {t: Esc, h: func}
+  - {t: ↹, h: num}
+  - {t: ␣, h: sym}
+  - {t: ⏎, h: func}
+  - {t: ⌫, h: nav}
+  - {t: ⌦, h: eu}
+  - ←
+  - ↓
+  - ↑
+  - →
+  - ''
+  - ''
+  eu:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ę
+  - R
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - €
+  - {t: ▽, type: trans}
+  - Ó
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ą
+  - Ś
+  - {t: ▽, type: trans}
+  - Shift
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Shift
+  - =>
+  - Ł
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ż
+  - Ź
+  - Ć
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ń
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  nav:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Page Down
+  - Page Up
+  - ''
+  - ''
+  - Gui
+  - Alt
+  - Ctrl
+  - Shift
+  - ''
+  - Alt↑
+  - ←
+  - ↓
+  - ↑
+  - →
+  - Pause Break
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Alt↓
+  - Home
+  - End
+  - Insert
+  - APP
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  num:
+  - ⏎
+  - '7'
+  - '8'
+  - '9'
+  - '['
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Ctrl
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - ']'
+  - ''
+  - Shift
+  - Ctrl
+  - Alt
+  - Gui
+  - ''
+  - Shift
+  - ⌫
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sym:
+  - ⏎
+  - '&'
+  - '*'
+  - (
+  - '{'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Ctrl
+  - )
+  - $
+  - '%'
+  - ^
+  - '}'
+  - ''
+  - Shift
+  - Ctrl
+  - Alt
+  - Gui
+  - ''
+  - Shift
+  - ⌫
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - sys
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  func:
+  - ''
+  - F7
+  - F8
+  - F9
+  - F11
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Ctrl
+  - F10
+  - F4
+  - F5
+  - F6
+  - F12
+  - ''
+  - Shift
+  - Ctrl
+  - Alt
+  - Gui
+  - ''
+  - Shift
+  - ''
+  - F1
+  - F2
+  - F3
+  - Caps Lock
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ⏭️
+  - ⏯
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sys:
+  - ''
+  - ''
+  - ''
+  - n!v on
+  - n!v off
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Out BLE
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Out TOG
+  - ''
+  - ''
+  - ''
+  - ''
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [14, 17]
+  k: Caps Word
+  l: [default]
+  a: top

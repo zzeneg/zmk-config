@@ -95,10 +95,11 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_caps_word {
             timeout-ms = <50>;
             key-positions = <14 17>;
             bindings = <&caps_word>;
+            layers = <0>;
         };
     };
 
