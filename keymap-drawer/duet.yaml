@@ -60,7 +60,7 @@ layers:
   - {t: ▽, type: trans}
   - Ą
   - Ś
-  - Copy
+  - {t: ▽, type: trans}
   - Shift
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -73,7 +73,7 @@ layers:
   - Ż
   - Ź
   - Ć
-  - Paste
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ń
   - {t: ▽, type: trans}
@@ -81,7 +81,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: Esc, h: func}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -141,7 +141,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   num:
-  - ''
+  - ⏎
   - '7'
   - '8'
   - '9'
@@ -175,7 +175,7 @@ layers:
   - ''
   - ''
   - ''
-  - ⏎
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -188,11 +188,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   sym:
-  - ''
+  - ⏎
   - '&'
   - '*'
   - (
-  - '}'
+  - '{'
   - ''
   - ''
   - ''
@@ -203,7 +203,7 @@ layers:
   - $
   - '%'
   - ^
-  - )
+  - '}'
   - ''
   - Shift
   - Ctrl
@@ -235,18 +235,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   func:
-  - F12
+  - ''
   - F7
   - F8
   - F9
-  - '~'
+  - F11
   - ''
   - ''
   - ''
   - ''
   - ''
   - Ctrl
-  - F11
+  - F10
   - F4
   - F5
   - F6
@@ -258,10 +258,10 @@ layers:
   - Gui
   - ''
   - Shift
-  - F10
-  - F3
-  - F2
+  - ''
   - F1
+  - F2
+  - F3
   - Caps Lock
   - ''
   - ''
@@ -282,7 +282,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   sys:
-  - Boot
+  - ''
   - ''
   - ''
   - n!v on
@@ -293,11 +293,11 @@ layers:
   - ''
   - ''
   - Out BLE
+  - BT 1
   - BT 2
   - BT 3
   - BT 4
   - BT 5
-  - {t: BT, h: '5'}
   - ''
   - ''
   - ''
