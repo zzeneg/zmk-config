@@ -11,16 +11,16 @@ layers:
   - O
   - P
   - '='
-  - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHFT}
+  - {t: A, h: Gui}
+  - {t: S, h: Alt}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Shift}
   - G
   - H
-  - {t: J, h: RSHFT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: LALT}
-  - {t: ;, h: RGUI}
+  - {t: J, h: Shift}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Alt}
+  - {t: ;, h: Gui}
   - ''''
   - '-'
   - Z
@@ -34,54 +34,54 @@ layers:
   - .
   - /
   - '`'
-  - {t: ESC, h: func}
-  - {t: TAB, h: num}
-  - {t: SPACE, h: sym}
-  - {t: ENTER, h: func}
-  - {t: BSPC, h: nav}
-  - {t: DEL, h: eu}
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
+  - {t: Esc, h: func}
+  - {t: ↹, h: num}
+  - {t: ␣, h: sym}
+  - {t: ⏎, h: func}
+  - {t: ⌫, h: nav}
+  - {t: ⌦, h: eu}
+  - ←
+  - ↓
+  - ↑
+  - →
   - ''
   - ''
   eu:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RA(E)
+  - Ę
   - R
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RA(U)
+  - €
   - {t: ▽, type: trans}
-  - RA(O)
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RA(A)
-  - RA(S)
-  - LC(C)
-  - LSHFT
+  - Ó
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RSHFT
-  - '&m_arrow'
-  - RA(L)
+  - Ą
+  - Ś
+  - Copy
+  - Shift
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RA(Z)
-  - RA(X)
-  - RA(C)
-  - LC(V)
-  - {t: ▽, type: trans}
-  - RA(N)
+  - Shift
+  - =>
+  - Ł
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Ż
+  - Ź
+  - Ć
+  - Paste
+  - {t: ▽, type: trans}
+  - Ń
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ESC, h: func}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Esc, h: func}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -101,31 +101,31 @@ layers:
   - ''
   - ''
   - ''
-  - PG DN
-  - PG UP
+  - Page Down
+  - Page Up
   - ''
   - ''
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
+  - Gui
+  - Alt
+  - Ctrl
+  - Shift
   - ''
-  - LA(UP)
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - PAUSE BREAK
-  - ''
-  - ''
-  - ''
+  - Alt↑
+  - ←
+  - ↓
+  - ↑
+  - →
+  - Pause Break
   - ''
   - ''
   - ''
-  - LA(DOWN)
-  - HOME
-  - END
-  - INS
+  - ''
+  - ''
+  - ''
+  - Alt↓
+  - Home
+  - End
+  - Insert
   - APP
   - ''
   - {t: ▽, type: trans}
@@ -151,20 +151,20 @@ layers:
   - ''
   - ''
   - ''
-  - LCTRL
+  - Ctrl
   - '0'
   - '4'
   - '5'
   - '6'
   - ']'
   - ''
-  - RSHFT
-  - RCTRL
-  - LALT
-  - RGUI
+  - Shift
+  - Ctrl
+  - Alt
+  - Gui
   - ''
-  - LSHFT
-  - BSPC
+  - Shift
+  - ⌫
   - '1'
   - '2'
   - '3'
@@ -175,7 +175,7 @@ layers:
   - ''
   - ''
   - ''
-  - ENTER
+  - ⏎
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -198,20 +198,20 @@ layers:
   - ''
   - ''
   - ''
-  - LCTRL
+  - Ctrl
   - )
   - $
   - '%'
   - ^
   - )
   - ''
-  - RSHFT
-  - RCTRL
-  - LALT
-  - RGUI
+  - Shift
+  - Ctrl
+  - Alt
+  - Gui
   - ''
-  - LSHFT
-  - BSPC
+  - Shift
+  - ⌫
   - '!'
   - '@'
   - '#'
@@ -245,24 +245,24 @@ layers:
   - ''
   - ''
   - ''
-  - LCTRL
+  - Ctrl
   - F11
   - F4
   - F5
   - F6
   - F12
   - ''
-  - RSHFT
-  - RCTRL
-  - LALT
-  - RGUI
+  - Shift
+  - Ctrl
+  - Alt
+  - Gui
   - ''
-  - LSHFT
+  - Shift
   - F10
   - F3
   - F2
   - F1
-  - CAPS
+  - Caps Lock
   - ''
   - ''
   - ''
@@ -270,8 +270,8 @@ layers:
   - ''
   - ''
   - {type: held}
-  - NEXT
-  - PP
+  - ⏭️
+  - ⏯
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -282,21 +282,21 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   sys:
-  - '&bootloader'
+  - Boot
   - ''
   - ''
-  - EP ON
-  - EP OFF
+  - n!v on
+  - n!v off
   - ''
   - ''
   - ''
   - ''
   - ''
-  - OUT BLE
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - Out BLE
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
   - {t: BT, h: '5'}
   - ''
   - ''
@@ -304,12 +304,12 @@ layers:
   - ''
   - ''
   - ''
-  - OUT TOG
+  - Out TOG
   - ''
   - ''
   - ''
   - ''
-  - '&bootloader'
+  - Boot
   - ''
   - ''
   - ''
@@ -328,3 +328,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [14, 17]
+  k: Caps Word
+  l: [default]
+  a: top
