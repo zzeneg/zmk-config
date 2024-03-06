@@ -42,7 +42,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <140>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -51,7 +51,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <140>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -60,7 +60,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -71,7 +71,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
