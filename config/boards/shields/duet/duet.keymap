@@ -197,7 +197,7 @@
                             &kp DOLLAR  &kp PRCNT   &kp PLUS    &kp LBRC    &kp RBRC           &none        &none        &none        &none        &none
                 &kp PIPE    &kp AMPS    &kp EXCL    &kp EQUAL   &kp LPAR    &kp RPAR           &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
                 &kp CARET   &kp BSLH    &kp HASH    &kp STAR    &kp LBKT    &kp RBKT           &none        &none        &none        &none        &none       &none
-                                                         &mo SYS     &trans     &trans       &trans      &trans     &trans
+                                                          &trans     &trans     &trans       &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
@@ -209,7 +209,7 @@
                            &none       &kp F7      &kp F8      &kp F9      &kp F11             &none        &none        &none        &none        &none
                 &kp LCTRL  &kp F10     &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
                 &kp LSHFT  &none       &kp F1      &kp F2      &kp F3      &kp CAPS            &none        &none        &none        &none        &none       &none
-                                                    &trans     &kp C_NEXT     &kp C_PP       &trans      &trans     &trans
+                                                    &trans     &kp C_NEXT     &kp C_PP       &trans      &trans     &mo SYS
                 &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
@@ -218,11 +218,11 @@
             display-name = "SYS";
 
             bindings = <
-                              &none         &none         &none         &ext_power EP_ON   &ext_power EP_OFF           &none       &none       &none       &none       &none
-                &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none              &none                       &none       &none       &none       &none       &none      &none
-                &out OUT_USB  &none         &none         &bt BT_CLR    &none              &bootloader                 &none       &none       &none       &none       &none      &none
-                                                                                  &trans     &none     &trans        &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                                                     &trans
+                          &none     &none     &none     &none     &none           &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+                &none     &none     &none     &none     &none     &none           &ext_power EP_ON   &out OUT_BLE  &none         &none         &none           &bt BT_CLR
+                &none     &none     &none     &none     &none     &none           &ext_power EP_OFF  &out OUT_USB  &none         &none         &none           &none
+                                                &none     &none     &none       &trans      &bootloader     &trans
+                &none  &none  &none  &none  &none                                                                                              &none
             >;
         };
 

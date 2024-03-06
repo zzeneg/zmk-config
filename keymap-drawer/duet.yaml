@@ -269,7 +269,7 @@ layers:
   - ''
   - ''
   - ''
-  - SYS
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -321,7 +321,7 @@ layers:
   - ⏯
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SYS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -332,49 +332,49 @@ layers:
   - ''
   - ''
   - ''
-  - n!v on
-  - n!v off
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - Out BLE
   - BT 1
   - BT 2
   - BT 3
+  - BT 4
+  - BT 5
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
+  - n!v on
+  - Out BLE
   - ''
-  - ''
-  - Out USB
   - ''
   - ''
   - BT clear
   - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - n!v off
+  - Out USB
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
   - Boot
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {type: held}
   - ''
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
 combos:
 - p: [14, 17]
   k: Caps Word
