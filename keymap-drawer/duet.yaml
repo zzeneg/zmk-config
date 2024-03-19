@@ -1,6 +1,6 @@
 layers:
   BASE:
-  - '`'
+  - ''
   - W
   - E
   - R
@@ -9,7 +9,7 @@ layers:
   - U
   - I
   - O
-  - '='
+  - ''
   - Q
   - {t: A, h: Gui}
   - {t: S, h: Alt}
@@ -22,7 +22,7 @@ layers:
   - {t: L, h: Alt}
   - {t: P, h: Gui}
   - ;
-  - '-'
+  - ''
   - Z
   - X
   - C
@@ -33,11 +33,11 @@ layers:
   - ','
   - .
   - /
-  - ''''
+  - ''
   - {t: Esc, h: FUNC}
   - {t: ↹, h: NUM}
   - {t: ␣, h: SYM}
-  - {t: ⏎, h: FUNC}
+  - {t: ⏎, h: SYM}
   - {t: ⌫, h: NAV}
   - {t: ⌦, h: EU}
   - ←
@@ -46,55 +46,8 @@ layers:
   - →
   - ''
   - ''
-  GAME:
-  - '`'
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - '='
-  - {t: Q, h: Alt}
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - P
-  - ;
-  - {t: '-', h: Shift}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - {t: '''', h: Gui}
-  - {t: Esc, h: Ctrl}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   EU:
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - Ę
   - {t: ▽, type: trans}
@@ -103,20 +56,20 @@ layers:
   - €
   - {t: ▽, type: trans}
   - Ó
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - Ą
   - Ś
   - {t: ▽, type: trans}
   - Shift
   - {t: ▽, type: trans}
-  - email
+  - {t: ▽, type: trans}
   - Shift
-  - =>
+  - {t: ▽, type: trans}
   - Ł
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - Ż
   - Ź
   - Ć
@@ -127,7 +80,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - {t: Esc, h: FUNC}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,12 +95,12 @@ layers:
   - {t: ▽, type: trans}
   NAV:
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - Undo
+  - Redo
+  - Ctrl+`
+  - Print Scrn
+  - Caps Lock
+  - Insert
   - Page Down
   - Page Up
   - ''
@@ -156,28 +109,28 @@ layers:
   - Alt
   - Ctrl
   - Shift
-  - ''
+  - Scroll Lock
   - Alt↑
   - ←
   - ↓
   - ↑
   - →
+  - ''
+  - ''
+  - ''
+  - ''
+  - Shift+End
+  - Shift+Home
   - Pause Break
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - Alt↓
   - Home
   - End
-  - Insert
-  - APP
+  - ''
+  - ''
   - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ↹
+  - ␣
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -188,46 +141,46 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NUM:
-  - '='
+  - ''
   - '7'
   - '8'
   - '9'
-  - +
+  - ','
+  - ''
+  - '`'
+  - '"'
+  - ''''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - '@'
   - '0'
   - '4'
   - '5'
   - '6'
   - .
-  - ''
+  - email
   - Shift
   - Ctrl
   - Alt
   - Gui
   - ''
-  - ⌫
-  - /
+  - ''
+  - ''
   - '1'
   - '2'
   - '3'
-  - '*'
-  - ''
-  - ''
-  - ''
+  - ⌫
+  - =>
+  - '-'
+  - _
   - ''
   - ''
   - ''
   - ⏎
   - {type: held}
-  - {t: GAME, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ⌫
+  - ⌦
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -235,37 +188,37 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYM:
-  - $
+  - ''
   - '%'
   - +
   - '{'
   - '}'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '~'
+  - '#'
   - '|'
   - '&'
+  - ''
+  - ''
+  - \
   - '!'
   - '='
   - (
   - )
-  - ''
+  - $
   - Shift
   - Ctrl
   - Alt
   - Gui
   - ''
-  - ^
-  - \
-  - '#'
+  - ''
+  - ''
+  - ''
   - '*'
   - '['
   - ']'
   - ''
-  - ''
-  - ''
+  - '@'
+  - ^
   - ''
   - ''
   - ''
@@ -274,7 +227,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SYS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -292,8 +245,8 @@ layers:
   - ''
   - ''
   - ''
+  - ''
   - Ctrl
-  - F10
   - F4
   - F5
   - F6
@@ -304,12 +257,12 @@ layers:
   - Alt
   - Gui
   - ''
-  - Shift
+  - ''
   - ''
   - F1
   - F2
   - F3
-  - Caps Lock
+  - F10
   - ''
   - ''
   - ''
@@ -321,7 +274,7 @@ layers:
   - ⏯
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - SYS
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -363,9 +316,9 @@ layers:
   - ''
   - ''
   - ''
+  - ''
+  - ''
   - {type: held}
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - Boot
   - {type: held}

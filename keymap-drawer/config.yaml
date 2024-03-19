@@ -20,6 +20,11 @@ parse_config:
     '&kp RA(N)': Ń
     '&kp LC(C)': Copy
     '&kp LC(V)': Paste
+    '&kp LC(Z)': Undo
+    '&kp LC(Y)': Redo
+    '&kp LC(GRAVE)': Ctrl+`
+    '&kp LS(HOME)': Shift+Home
+    '&kp LS(END)': Shift+End
     '&kp LA(UP)': Alt↑
     '&kp LA(DOWN)': Alt↓
 
@@ -70,6 +75,8 @@ parse_config:
     END: End
     CAPS: Caps Lock
     PSCRN: Print Scrn
+    PRINTSCREEN: Print Scrn
+    SCROLLLOCK: Scroll Lock
     PAUSE_BREAK: Pause Break
 
     UP: ↑
