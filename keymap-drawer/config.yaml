@@ -7,6 +7,7 @@ parse_config:
 
     '&m_arrow': =>
     '&m_email': email
+    '&m_sl': select line
 
     '&kp RA(A)': Ą
     '&kp RA(E)': Ę
@@ -27,6 +28,8 @@ parse_config:
     '&kp LS(END)': Shift+End
     '&kp LA(UP)': Alt↑
     '&kp LA(DOWN)': Alt↓
+    '&kp SCLK': Scroll Lock
+    '&kp PSCRN': Print Screen
 
     '&out OUT_USB': Out USB
     '&out OUT_BLE': Out BLE

@@ -112,6 +112,17 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp GT>;
         };
+
+        m_sl: m_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp HOME> 
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp END>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
     };
 
     combos {
@@ -134,7 +145,7 @@
                            &none        &kp W        &kp E         &kp R         &kp T            &kp Y      &kp U         &kp I         &kp O        &none     
                 &kp Q      &hml LGUI A  &hml LALT S  &hcl LCTRL D  &hsl LSHFT F  &kp G            &kp H      &hsr RSHFT J  &hcr RCTRL K  &hmr LALT L  &hmr RGUI P  &kp SEMI
                 &none      &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH    &none
-                                                 &lt FUNC ESC  &lt NUM TAB  &lt SYM SPACE       &lt SYM ENTER  &lt NAV BSPC  &lt EU DEL
+                                                 &lt FUNC ESC  &lt NUM SPACE  &lt SYM TAB       &lt SYM ENTER  &lt NAV BSPC  &lt EU DEL
                 &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none                                                                             &none
             >;
 
@@ -148,7 +159,7 @@
                           &none        &trans      &kp RA(E)    &trans       &trans            &trans       &kp RA(U)    &trans      &kp RA(O)    &none
                 &trans    &kp RA(A)    &kp RA(S)   &trans       &kp LSHFT    &trans            &trans       &kp RSHFT    &trans      &kp RA(L)    &trans       &trans
                 &none     &kp RA(Z)    &kp RA(X)   &kp RA(C)    &trans       &trans            &kp RA(N)    &trans       &trans      &trans       &trans       &none
-                                                     &lt FUNC ESC   &trans     &trans       &trans      &trans     &trans
+                                                           &trans   &trans     &trans       &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                               &trans
             >;
         };
@@ -157,10 +168,10 @@
             display-name = "NAV";
 
             bindings = <
-                         &none     &kp LC(Z)  &kp LC(Y)    &kp LC(GRAVE)  &kp PRINTSCREEN         &kp CAPS      &kp INS    &kp PG_DN    &kp PG_UP   &none
-                &none    &kp LGUI  &kp LALT   &kp LCTRL    &kp LSHFT      &kp SCROLLLOCK          &kp LA(UP)    &kp LEFT  &kp DOWN     &kp UP       &kp RIGHT    &none
-                &none    &none     &none      &kp LS(END)  &kp LS(HOME)   &kp PAUSE_BREAK         &kp LA(DOWN)  &kp HOME  &kp END      &none        &none        &none
-                                                        &trans     &kp TAB     &kp SPACE        &trans      &trans     &trans
+                         &none     &kp LC(Z)  &kp LC(Y)    &kp LC(GRAVE)  &none          &none         &kp INS    &kp PG_DN    &kp PG_UP    &none
+                &none    &kp LGUI  &kp LALT   &kp LCTRL    &kp LSHFT      &none          &kp LA(UP)    &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT    &none
+                &none    &none     &none      &kp LS(END)  &kp LS(HOME)   &none          &kp LA(DOWN)  &kp HOME   &kp END      &none        &none        &none
+                                                      &trans     &trans     &trans        &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
@@ -169,10 +180,10 @@
             display-name = "NUM";
 
             bindings = <
-                         &none      &kp N7      &kp N8      &kp N9      &kp COMMA          &none        &kp GRAVE    &kp DQT      &kp SQT      &none
-                &none    &kp N0     &kp N4      &kp N5      &kp N6      &kp DOT            &m_email     &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI     &none
-                &none    &none      &kp N1      &kp N2      &kp N3      &kp BSPC           &m_arrow     &kp MINUS    &kp UNDER    &none        &none        &none
-                                                   &kp ENTER     &trans     &trans       &trans      &kp BSPC     &kp DEL
+                            &none      &kp N7      &kp N8      &kp N9      &kp COMMA          &none     &kp TILDE    &kp UNDER    &kp DQT    &none
+                &kp MINUS   &kp N0     &kp N4      &kp N5      &kp N6      &kp DOT            &none     &kp GRAVE    &kp MINUS    &kp SQT    &m_email     &none
+                &none       &none      &kp N1      &kp N2      &kp N3      &kp BSPC           &none     &m_arrow     &m_sl        &none      &none        &none
+                                                      &kp ENTER     &trans     &trans       &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                               &trans
             >;
         };
@@ -181,9 +192,9 @@
             display-name = "SYM";
 
             bindings = <
-                         &none       &kp PRCNT   &kp PLUS    &kp LBRC    &kp RBRC           &kp TILDE    &kp HASH     &kp PIPE     &kp AMPS     &none
-                &none    &kp BSLH    &kp EXCL    &kp EQUAL   &kp LPAR    &kp RPAR           &kp DLLR     &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
-                &none    &none       &none       &kp STAR    &kp LBKT    &kp RBKT           &none        &kp AT       &kp CARET    &none        &none       &none
+                         &none       &kp PRCNT   &kp PLUS    &kp LBRC    &none           &none    &kp RBRC    &kp AT      &kp DLLR     &none
+                &none    &kp BSLH    &kp EXCL    &kp EQUAL   &kp LPAR    &none           &none    &kp RPAR    &kp PIPE    &kp AMPS     &kp HASH    &none
+                &none    &none       &none       &kp STAR    &kp LBKT    &kp DEL         &none    &kp RBKT    &kp CARET   &none        &none       &none
                                                           &trans     &trans     &trans       &trans      &trans     &mo SYS
                 &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
@@ -193,9 +204,9 @@
             display-name = "FUNC";
 
             bindings = <
-                         &none       &kp F7      &kp F8      &kp F9      &kp F11             &none        &none        &none        &none        &none
-                &none    &kp LCTRL   &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT     &kp RGUI    &none
-                &none    &none       &kp F1      &kp F2      &kp F3      &kp F10             &none        &none        &none        &none        &none       &none
+                         &none       &kp F7      &kp F8      &kp F9      &kp F11             &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK  &none
+                &none    &kp LCTRL   &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT         &kp RGUI    &none
+                &none    &none       &kp F1      &kp F2      &kp F3      &kp F10             &none        &kp CAPS     &kp KP_NUM   &none            &none       &none
                                                     &trans     &kp C_NEXT     &kp C_PP       &trans      &trans     &trans
                 &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;

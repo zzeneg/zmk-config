@@ -35,8 +35,8 @@ layers:
   - /
   - ''
   - {t: Esc, h: FUNC}
-  - {t: ↹, h: NUM}
-  - {t: ␣, h: SYM}
+  - {t: ␣, h: NUM}
+  - {t: ↹, h: SYM}
   - {t: ⏎, h: SYM}
   - {t: ⌫, h: NAV}
   - {t: ⌦, h: EU}
@@ -81,7 +81,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - {t: Esc, h: FUNC}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -98,8 +98,8 @@ layers:
   - Undo
   - Redo
   - Ctrl+`
-  - Print Scrn
-  - Caps Lock
+  - ''
+  - ''
   - Insert
   - Page Down
   - Page Up
@@ -109,7 +109,7 @@ layers:
   - Alt
   - Ctrl
   - Shift
-  - Scroll Lock
+  - ''
   - Alt↑
   - ←
   - ↓
@@ -121,7 +121,7 @@ layers:
   - ''
   - Shift+End
   - Shift+Home
-  - Pause Break
+  - ''
   - Alt↓
   - Home
   - End
@@ -129,8 +129,8 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - ↹
-  - ␣
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -147,21 +147,21 @@ layers:
   - '9'
   - ','
   - ''
-  - '`'
+  - '~'
+  - _
   - '"'
-  - ''''
   - ''
-  - ''
+  - '-'
   - '0'
   - '4'
   - '5'
   - '6'
   - .
+  - ''
+  - '`'
+  - '-'
+  - ''''
   - email
-  - Shift
-  - Ctrl
-  - Alt
-  - Gui
   - ''
   - ''
   - ''
@@ -169,9 +169,9 @@ layers:
   - '2'
   - '3'
   - ⌫
+  - ''
   - =>
-  - '-'
-  - _
+  - select line
   - ''
   - ''
   - ''
@@ -179,8 +179,8 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ⌫
-  - ⌦
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -192,32 +192,32 @@ layers:
   - '%'
   - +
   - '{'
+  - ''
+  - ''
   - '}'
-  - '~'
-  - '#'
-  - '|'
-  - '&'
+  - '@'
+  - $
   - ''
   - ''
   - \
   - '!'
   - '='
   - (
+  - ''
+  - ''
   - )
-  - $
-  - Shift
-  - Ctrl
-  - Alt
-  - Gui
+  - '|'
+  - '&'
+  - '#'
   - ''
   - ''
   - ''
   - ''
   - '*'
   - '['
-  - ']'
+  - ⌦
   - ''
-  - '@'
+  - ']'
   - ^
   - ''
   - ''
@@ -241,9 +241,9 @@ layers:
   - F9
   - F11
   - ''
-  - ''
-  - ''
-  - ''
+  - Print Screen
+  - SLCK
+  - Pause Break
   - ''
   - ''
   - Ctrl
@@ -264,8 +264,8 @@ layers:
   - F3
   - F10
   - ''
-  - ''
-  - ''
+  - Caps Lock
+  - KP NUM
   - ''
   - ''
   - ''
