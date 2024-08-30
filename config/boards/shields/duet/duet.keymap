@@ -18,9 +18,9 @@
 #define FUNC 5
 #define SYS 6
 
-#define KEYS_L 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27  // left-hand keys
-#define KEYS_R 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33  // right-hand keys
-#define THUMBS 34 35 36 37 38 39
+#define KEYS_L 0 1 2 3 8 9 10 11 12 13 20 21 22 23 24 // left-hand keys
+#define KEYS_R 4 5 6 7 14 15 16 17 18 19 25 26 27 28 29 // right-hand keys
+#define THUMBS 30 31 32 33 34 35 
 
 &lt {
     tapping-term-ms = <150>;
@@ -142,11 +142,10 @@
             display-name = "BASE";
 
             bindings = <
-                           &none        &kp W        &kp E         &kp R         &kp T            &kp Y      &kp U         &kp I         &kp O        &none     
+                                        &kp W        &kp E         &kp R         &kp T            &kp Y      &kp U         &kp I         &kp O
                 &kp Q      &hml LGUI A  &hml LALT S  &hcl LCTRL D  &hsl LSHFT F  &kp G            &kp H      &hsr RSHFT J  &hcr RCTRL K  &hmr LALT L  &hmr RGUI P  &kp SEMI
-                &none      &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH    &none
+                           &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH
                                                  &lt FUNC ESC  &lt NUM SPACE  &lt SYM TAB       &lt SYM ENTER  &lt NAV BSPC  &lt EU DEL
-                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none                                                                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -156,11 +155,10 @@
             display-name = "EU";
 
             bindings = <
-                          &none        &trans      &kp RA(E)    &trans       &trans            &trans       &kp RA(U)    &trans      &kp RA(O)    &none
+                                       &trans      &kp RA(E)    &trans       &trans            &trans       &kp RA(U)    &trans      &kp RA(O)
                 &trans    &kp RA(A)    &kp RA(S)   &trans       &kp LSHFT    &trans            &trans       &kp RSHFT    &trans      &kp RA(L)    &trans       &trans
-                &none     &kp RA(Z)    &kp RA(X)   &kp RA(C)    &trans       &trans            &kp RA(N)    &trans       &trans      &trans       &trans       &none
+                          &kp RA(Z)    &kp RA(X)   &kp RA(C)    &trans       &trans            &kp RA(N)    &trans       &trans      &trans       &trans
                                                            &trans   &trans     &trans       &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                               &trans
             >;
         };
 
@@ -168,11 +166,10 @@
             display-name = "NAV";
 
             bindings = <
-                         &none     &kp LC(Z)  &kp LC(Y)    &kp LC(GRAVE)  &none          &none         &kp INS    &kp PG_DN    &kp PG_UP    &none
+                                   &kp LC(Z)  &kp LC(Y)    &kp LC(GRAVE)  &none          &none         &kp INS    &kp PG_DN    &kp PG_UP
                 &none    &kp LGUI  &kp LALT   &kp LCTRL    &kp LSHFT      &none          &kp LA(UP)    &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT    &none
-                &none    &none     &none      &kp LS(END)  &kp LS(HOME)   &none          &kp LA(DOWN)  &kp HOME   &kp END      &none        &none        &none
+                         &none     &none      &kp LS(END)  &kp LS(HOME)   &none          &kp LA(DOWN)  &kp HOME   &kp END      &none        &none
                                                       &trans     &trans     &trans        &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
 
@@ -180,11 +177,10 @@
             display-name = "NUM";
 
             bindings = <
-                            &none      &kp N7      &kp N8      &kp N9      &kp COMMA          &none     &kp TILDE    &kp UNDER    &kp DQT    &none
+                                       &kp N7      &kp N8      &kp N9      &kp COMMA          &none     &kp TILDE    &kp UNDER    &kp DQT
                 &kp MINUS   &kp N0     &kp N4      &kp N5      &kp N6      &kp DOT            &none     &kp GRAVE    &kp MINUS    &kp SQT    &m_email     &none
-                &none       &none      &kp N1      &kp N2      &kp N3      &kp BSPC           &none     &m_arrow     &m_sl        &none      &none        &none
+                            &none      &kp N1      &kp N2      &kp N3      &kp BSPC           &none     &m_arrow     &m_sl        &none      &none
                                                       &kp ENTER     &trans     &trans       &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                               &trans
             >;
         };
 
@@ -192,11 +188,10 @@
             display-name = "SYM";
 
             bindings = <
-                         &none       &kp PRCNT   &kp PLUS    &kp LBRC    &none           &none    &kp RBRC    &kp AT      &kp DLLR     &none
+                                     &kp PRCNT   &kp PLUS    &kp LBRC    &none           &none    &kp RBRC    &kp AT      &kp DLLR
                 &none    &kp BSLH    &kp EXCL    &kp EQUAL   &kp LPAR    &none           &none    &kp RPAR    &kp PIPE    &kp AMPS     &kp HASH    &none
-                &none    &none       &none       &kp STAR    &kp LBKT    &kp DEL         &none    &kp RBKT    &kp CARET   &none        &none       &none
-                                                          &trans     &trans     &trans       &trans      &trans     &mo SYS
-                &trans  &trans  &trans  &trans  &trans                                                                                &trans
+                         &none       &none       &kp STAR    &kp LBKT    &kp DEL         &none    &kp RBKT    &kp CARET   &none        &none
+                                                     &trans     &trans     &trans       &trans      &trans     &mo SYS
             >;
         };
 
@@ -204,11 +199,10 @@
             display-name = "FUNC";
 
             bindings = <
-                         &none       &kp F7      &kp F8      &kp F9      &kp F11             &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK  &none
+                                     &kp F7      &kp F8      &kp F9      &kp F11             &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK
                 &none    &kp LCTRL   &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT         &kp RGUI    &none
-                &none    &none       &kp F1      &kp F2      &kp F3      &kp F10             &none        &kp CAPS     &kp KP_NUM   &none            &none       &none
+                         &none       &kp F1      &kp F2      &kp F3      &kp F10             &none        &kp CAPS     &kp KP_NUM   &none            &none
                                                     &trans     &kp C_NEXT     &kp C_PP       &trans      &trans     &trans
-                &trans  &trans  &trans  &trans  &trans                                                                                &trans
             >;
         };
 
@@ -216,11 +210,10 @@
             display-name = "SYS";
 
             bindings = <
-                          &none     &none     &none     &none     &none           &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+                                    &none     &none     &none     &none           &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
                 &none     &none     &none     &none     &none     &none           &ext_power EP_ON   &out OUT_BLE  &none         &none         &none          &bt BT_CLR
-                &none     &none     &none     &none     &none     &none           &ext_power EP_OFF  &out OUT_USB  &none         &none         &none          &none
+                          &none     &none     &none     &none     &none           &ext_power EP_OFF  &out OUT_USB  &none         &none         &none
                                                 &none     &none     &none       &trans      &bootloader     &trans
-                &none  &none  &none  &none  &none                                                                                              &none
             >;
         };
 

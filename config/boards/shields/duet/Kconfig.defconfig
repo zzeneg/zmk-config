@@ -4,6 +4,6 @@
 if SHIELD_DUET
 
 config ZMK_KEYBOARD_NAME
-    default "duet"
+    default "molekula"
 
 endif

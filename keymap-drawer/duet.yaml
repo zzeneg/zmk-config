@@ -1,6 +1,5 @@
 layers:
   BASE:
-  - ''
   - W
   - E
   - R
@@ -9,7 +8,6 @@ layers:
   - U
   - I
   - O
-  - ''
   - Q
   - {t: A, h: Gui}
   - {t: S, h: Alt}
@@ -22,7 +20,6 @@ layers:
   - {t: L, h: Alt}
   - {t: P, h: Gui}
   - ;
-  - ''
   - Z
   - X
   - C
@@ -33,21 +30,13 @@ layers:
   - ','
   - .
   - /
-  - ''
   - {t: Esc, h: FUNC}
   - {t: ␣, h: NUM}
   - {t: ↹, h: SYM}
   - {t: ⏎, h: SYM}
   - {t: ⌫, h: NAV}
   - {t: ⌦, h: EU}
-  - ←
-  - ↓
-  - ↑
-  - →
-  - ''
-  - ''
   EU:
-  - ''
   - {t: ▽, type: trans}
   - Ę
   - {t: ▽, type: trans}
@@ -56,7 +45,6 @@ layers:
   - €
   - {t: ▽, type: trans}
   - Ó
-  - ''
   - {t: ▽, type: trans}
   - Ą
   - Ś
@@ -69,7 +57,6 @@ layers:
   - Ł
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
   - Ż
   - Ź
   - Ć
@@ -80,21 +67,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   NAV:
-  - ''
   - Undo
   - Redo
   - Ctrl+`
@@ -103,7 +82,6 @@ layers:
   - Insert
   - Page Down
   - Page Up
-  - ''
   - ''
   - Gui
   - Alt
@@ -118,7 +96,6 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - Shift+End
   - Shift+Home
   - ''
@@ -127,21 +104,13 @@ layers:
   - End
   - ''
   - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   NUM:
-  - ''
   - '7'
   - '8'
   - '9'
@@ -150,7 +119,6 @@ layers:
   - '~'
   - _
   - '"'
-  - ''
   - '-'
   - '0'
   - '4'
@@ -164,7 +132,6 @@ layers:
   - email
   - ''
   - ''
-  - ''
   - '1'
   - '2'
   - '3'
@@ -174,21 +141,13 @@ layers:
   - select line
   - ''
   - ''
-  - ''
   - ⏎
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   SYM:
-  - ''
   - '%'
   - +
   - '{'
@@ -197,7 +156,6 @@ layers:
   - '}'
   - '@'
   - $
-  - ''
   - ''
   - \
   - '!'
@@ -212,7 +170,6 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - '*'
   - '['
   - ⌦
@@ -221,21 +178,13 @@ layers:
   - ^
   - ''
   - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SYS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   FUNC:
-  - ''
   - F7
   - F8
   - F9
@@ -244,7 +193,6 @@ layers:
   - Print Screen
   - SLCK
   - Pause Break
-  - ''
   - ''
   - Ctrl
   - F4
@@ -258,7 +206,6 @@ layers:
   - Gui
   - ''
   - ''
-  - ''
   - F1
   - F2
   - F3
@@ -268,16 +215,9 @@ layers:
   - KP NUM
   - ''
   - ''
-  - ''
   - {type: held}
   - ⏭️
   - ⏯
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -286,12 +226,10 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - BT 1
   - BT 2
   - BT 3
   - BT 4
-  - BT 5
   - ''
   - ''
   - ''
@@ -309,10 +247,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - n!v off
   - Out USB
-  - ''
   - ''
   - ''
   - ''
@@ -322,12 +258,6 @@ layers:
   - {t: ▽, type: trans}
   - Boot
   - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
 combos:
 - p: [14, 17]
   k: Caps Word
