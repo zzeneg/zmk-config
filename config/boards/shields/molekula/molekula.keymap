@@ -129,7 +129,7 @@
         compatible = "zmk,combos";
         combo_caps_word {
             timeout-ms = <50>;
-            key-positions = <14 17>;
+            key-positions = <12 15>;
             bindings = <&caps_word>;
             layers = <0>;
         };

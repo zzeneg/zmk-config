@@ -259,7 +259,7 @@ layers:
   - Boot
   - {type: held}
 combos:
-- p: [14, 17]
+- p: [12, 15]
   k: Caps Word
   l: [BASE]
   a: top

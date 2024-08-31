@@ -1,5 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_DUET
-   def_bool $(shields_list_contains,duet)
+if SHIELD_MOLEKULA
+
+config ZMK_KEYBOARD_NAME
+    default "molekula"
+
+endif
