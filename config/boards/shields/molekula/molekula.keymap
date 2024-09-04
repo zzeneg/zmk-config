@@ -19,62 +19,14 @@
 #define FUNC 4
 #define SYS 5
 
-#include "combos.dtsi"  // requires layer aliases
-
 #define KEYS_L LT0 LT1 LT2 LT3 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4  // left hand
 #define KEYS_R RT0 RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4  // right hand
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
 
-// reuse basic mod-morph scheme
-
-#define ZMK_BEHAVIOR_CORE_mod_morph       compatible = "zmk,behavior-mod-morph";       #binding-cells = <0>
-#define ZMK_BEHAVIOR(name, type, ...) \
-    / { \
-        behaviors { \
-            name: name { \
-                ZMK_BEHAVIOR_CORE_ ## type; \
-                __VA_ARGS__ \
-            }; \
-        }; \
-    };
-#define ZMK_MOD_MORPH(name, ...) ZMK_BEHAVIOR(name, mod_morph, __VA_ARGS__)
-#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
-    ZMK_MOD_MORPH(NAME, \
-        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
-        bindings = <BINDING1>, <BINDING2>; \
-    )
-
-// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
-SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
-
-// tap: dot | shift + tap: colon | ctrl + shift + tap: >
-SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
-SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
-
-// tap: qmark | shift + tap: excl
-SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
-
-// // tap: left/right parenthesis | shft + tap: less-than/greater-than
-SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
-SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
-
-&sk {  // sticky-key config
-    release-after-ms = <900>;  // release after 0.6s
-    quick-release;             // no double capitalization when rolling keys
-};
-
 &lt {  // layer-tap config
     flavor = "balanced";
-    tapping-term-ms = <160>;
+    tapping-term-ms = <150>;
     quick-tap-ms = <175>;
-};
-
-&mt {  // mod-tap config
-    flavor = "tap-preferred";
-    tapping-term-ms = <220>;
-    quick-tap-ms = <220>;
-    hold-trigger-key-positions = <0>;
 };
 
 &encoder {
@@ -83,25 +35,25 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
 / {
     behaviors {
-        // hsl: homerow_shift_l {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <140>;
-        //     quick-tap-ms = <0>;
-        //     require-prior-idle-ms = <30>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
-        // };
-        // hsr: homerow_shift_r {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <140>;
-        //     quick-tap-ms = <0>;
-        //     require-prior-idle-ms = <30>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
-        // };
-        hcl: homerow_ctrl_l {
+        hsl: homerow_shift_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <30>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hsr: homerow_shift_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <30>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hcl: homerow_ctrl_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -112,7 +64,7 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
-        hcr: homerow_ctrl_r {
+        hcr: homerow_ctrl_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -123,7 +75,7 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
-        hml: homerow_mods_l {
+        hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -134,7 +86,7 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
-        hmr: homerow_mods_r {
+        hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -144,6 +96,54 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
+        };
+
+        // tap: comma | shift + tap: semicolon
+        comma_semi: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // tap: dot | shift + tap: colon
+        dot_colon: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // tap: qmark | shift + tap: excl
+        qexcl: question_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // tap: slash | shift + tap: backslash
+        bslash: slash_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // tap: left parenthesis | shift + tap: less-than
+        lpar_lt: left_parens_less_than {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // tap: right parenthesis | shift + tap: greater-than
+        rpar_gt: right_parens_greater_than {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -176,8 +176,9 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
         compatible = "zmk,combos";
         combo_caps_word {
             timeout-ms = <50>;
-            key-positions = <12 15>;
+            key-positions = <LM1 RM1>;
             bindings = <&caps_word>;
+            layers = <0>;
         };
     };
 
@@ -189,9 +190,9 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
             bindings = <
                                         &kp W        &kp E         &kp R         &kp T            &kp Y      &kp U         &kp I         &kp O
-                &kp Q      &hml LGUI A  &hml LALT S  &hcl LCTRL D  &hml LSHFT F  &kp G            &kp H      &hmr RSHFT J  &hcr RCTRL K  &hmr LALT L  &hmr RGUI P  &kp SQT
-                           &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N      &kp M         &comma_morph  &dot_morph    &qexcl
-                                                  &kp ENTER  &lt NUM SPACE  &lt FUNC TAB        &sk LSHFT  &lt NAV BSPC  &lt EU DEL
+                &kp Q      &hml LGUI A  &hml LALT S  &hcl LCTRL D  &hsl LSHFT F  &kp G            &kp H      &hsr RSHFT J  &hcr RCTRL K  &hmr LALT L  &hmr RGUI P  &kp SQT
+                           &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N      &kp M         &comma_semi   &dot_colon    &qexcl
+                                                    &lt FUNC ESC  &lt NUM SPACE  &kp TAB        &kp ENTER  &lt NAV BSPC  &lt EU DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -204,18 +205,18 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
                                        &trans      &kp RA(E)    &trans       &trans            &trans       &kp RA(U)    &trans      &kp RA(O)
                 &trans    &kp RA(A)    &kp RA(S)   &trans       &kp LSHFT    &trans            &trans       &kp RSHFT    &trans      &kp RA(L)    &trans       &trans
                           &kp RA(Z)    &kp RA(X)   &kp RA(C)    &trans       &trans            &kp RA(N)    &trans       &trans      &trans       &trans
-                                                           &trans   &trans     &trans       &trans      &mo SYS     &trans
+                                                         &trans     &trans     &trans       &trans      &trans     &trans
             >;
         };
 
         nav_layer {
             display-name = "NAV";
 
-            bindings = <
-                                   &kp LC(Z)  &kp LC(Y)    &kp LC(GRAVE)  &none          &none         &kp INS    &kp PG_DN    &kp PG_UP
-                &none    &kp LGUI  &kp LALT   &kp LCTRL    &kp LSHFT      &none          &kp LA(UP)    &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT    &none
-                         &none     &none      &kp LS(END)  &kp LS(HOME)   &none          &kp LA(DOWN)  &kp HOME   &kp END      &none        &none
-                                                      &trans     &trans     &trans        &trans      &trans     &trans
+            bindings = < 
+                                   &kp LBKT   &kp RBKT     &kp EQUAL   &kp PLUS           &bslash       &kp INS    &kp PG_DN    &kp PG_UP
+                &none    &kp LGUI  &kp LALT   &kp LCTRL    &kp LSHFT   &kp GRAVE          &kp LA(UP)    &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT    &none
+                         &none     &none      &kp AMPS     &kp PIPE    &kp HASH           &kp LA(DOWN)  &kp HOME   &kp END      &none        &none
+                                                    &trans     &trans     &trans        &trans      &trans     &mo SYS
             >;
         };
 
@@ -223,20 +224,20 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
             display-name = "NUM";
 
             bindings = <
-                                       &kp N7      &kp N8      &kp N9      &kp COMMA          &none     &kp HASH    &kp DLLR    &kp PRCNT
-                &kp MINUS   &kp N0     &kp N4      &kp N5      &kp N6      &kp DOT            &none     &kp TILDE    &kp STAR    &kp PIPE    &kp AMPS     &none
-                            &none      &kp N1      &kp N2      &kp N3      &kp BSPC           &none     &m_arrow     &m_sl       &m_email      &none
-                                                         &trans     &trans     &trans       &trans      &trans     &trans
+                                       &kp N7      &kp N8      &kp N9      &comma_semi        &kp UNDER  &kp MINUS    &lpar_lt     &rpar_gt
+                 &none      &kp N0     &kp N4      &kp N5      &kp N6      &dot_colon         &kp TILDE  &kp RSHFT    &kp RCTRL    &kp LALT   &kp RGUI     &none
+                            &none      &kp N1      &kp N2      &kp N3      &kp BSPC           &kp DLLR   &m_arrow     &m_sl        &m_email   &none
+                                                      &kp ENTER     &trans     &trans       &trans      &trans     &trans
             >;
         };
 
         // sym_layer {
-        //     display-name = "SYM";
+        //     display-name = "SYM"; 
 
         //     bindings = <
-        //                              &kp PRCNT   &kp PLUS    &kp LBRC    &none           &none    &kp RBRC    &kp AT      &kp DLLR
-        //         &none    &kp BSLH    &kp EXCL    &kp EQUAL   &kp LPAR    &none           &none    &kp RPAR    &kp PIPE    &kp AMPS     &kp HASH    &none
-        //                  &none       &none       &kp STAR    &kp LBKT    &kp DEL         &none    &kp RBKT    &kp CARET   &none        &none
+        //                              &kp PRCNT   &kp PLUS    &kp LBRC    &kp RBRC         &none    &kp UNDER    &kp PIPE    &kp AMPS
+        //         &none    &kp BSLH    &kp SLASH   &kp EQUAL   &kp LPAR    &kp RPAR         &none    &kp RSHFT    &kp RCTRL   &kp LALT     &kp RGUI    &none
+        //                  &none       &none       &kp STAR    &kp LBKT    &kp RBKT         &none    &kp HASH     &kp DLLR    &none        &none
         //                                              &trans     &trans     &trans       &trans      &trans     &mo SYS
         //     >;
         // };
