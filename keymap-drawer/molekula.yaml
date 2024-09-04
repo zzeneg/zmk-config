@@ -19,7 +19,7 @@ layers:
   - {t: K, h: Ctrl}
   - {t: L, h: Alt}
   - {t: P, h: Gui}
-  - ;
+  - ''''
   - Z
   - X
   - C
@@ -27,13 +27,13 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
-  - /
-  - {t: Esc, h: FUNC}
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: '?', s: '!'}
+  - ⏎
   - {t: ␣, h: NUM}
-  - {t: ↹, h: SYM}
-  - {t: ⏎, h: SYM}
+  - {t: ↹, h: FUNC}
+  - {t: Shift, h: sticky}
   - {t: ⌫, h: NAV}
   - {t: ⌦, h: EU}
   EU:
@@ -71,7 +71,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SYS
   - {type: held}
   NAV:
   - Undo
@@ -116,9 +116,9 @@ layers:
   - '9'
   - ','
   - ''
-  - '~'
-  - _
-  - '"'
+  - '#'
+  - $
+  - '%'
   - '-'
   - '0'
   - '4'
@@ -126,10 +126,10 @@ layers:
   - '6'
   - .
   - ''
-  - '`'
-  - '-'
-  - ''''
-  - email
+  - '~'
+  - '*'
+  - '|'
+  - '&'
   - ''
   - ''
   - '1'
@@ -139,51 +139,14 @@ layers:
   - ''
   - =>
   - select line
+  - email
   - ''
-  - ''
-  - ⏎
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  SYM:
-  - '%'
-  - +
-  - '{'
-  - ''
-  - ''
-  - '}'
-  - '@'
-  - $
-  - ''
-  - \
-  - '!'
-  - '='
-  - (
-  - ''
-  - ''
-  - )
-  - '|'
-  - '&'
-  - '#'
-  - ''
-  - ''
-  - ''
-  - '*'
-  - '['
-  - ⌦
-  - ''
-  - ']'
-  - ^
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SYS
   FUNC:
   - F7
   - F8
@@ -215,9 +178,9 @@ layers:
   - KP NUM
   - ''
   - ''
-  - {type: held}
   - ⏭️
   - ⏯
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -254,12 +217,47 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
-  - {t: ▽, type: trans}
+  - ''
   - Boot
   - {type: held}
+  - {type: held}
 combos:
+- p: [0, 10]
+  k: +
+  l: [BASE, NAV, NUM]
+- p: [1, 11]
+  k: '='
+  l: [BASE, NAV, NUM]
+- p: [2, 12]
+  k: ↹
+  l: [BASE, NAV, NUM]
+- p: [10, 21]
+  k: /
+  l: [BASE, NAV, NUM]
+- p: [11, 22]
+  k: ''
+  l: [BASE, NAV, NUM]
+- p: [12, 23]
+  k: Esc
+  l: [BASE, NAV, NUM]
+- p: [5, 15]
+  k: {t: (, s: <}
+  l: [BASE, NAV, NUM]
+- p: [6, 16]
+  k: {t: ), s: '>'}
+  l: [BASE, NAV, NUM]
+- p: [7, 17]
+  k: '-'
+  l: [BASE, NAV, NUM]
+- p: [15, 26]
+  k: '['
+  l: [BASE, NAV, NUM]
+- p: [16, 27]
+  k: ']'
+  l: [BASE, NAV, NUM]
+- p: [17, 28]
+  k: _
+  l: [BASE, NAV, NUM]
 - p: [12, 15]
   k: Caps Word
-  l: [BASE]
   a: top
