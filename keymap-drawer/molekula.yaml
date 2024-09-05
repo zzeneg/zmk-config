@@ -19,7 +19,7 @@ layers:
   - {t: K, h: Ctrl}
   - {t: L, h: Alt}
   - {t: P, h: Gui}
-  - ''''
+  - ;
   - Z
   - X
   - C
@@ -27,12 +27,12 @@ layers:
   - B
   - N
   - M
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: '?', s: '!'}
+  - ','
+  - .
+  - /
   - {t: Esc, h: FUNC}
-  - {t: ␣, h: NUM}
-  - ↹
+  - {t: ␣, h: SYM}
+  - {t: ↹, h: NUM}
   - ⏎
   - {t: ⌫, h: NAV}
   - {t: ⌦, h: EU}
@@ -74,11 +74,11 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   NAV:
-  - '['
-  - ']'
-  - '='
-  - +
-  - {t: /, s: \}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - Insert
   - Page Down
   - Page Up
@@ -87,7 +87,7 @@ layers:
   - Alt
   - Ctrl
   - Shift
-  - '`'
+  - ''
   - Alt↑
   - ←
   - ↓
@@ -96,9 +96,9 @@ layers:
   - ''
   - ''
   - ''
-  - '&'
-  - '|'
-  - '#'
+  - ''
+  - ''
+  - ''
   - Alt↓
   - Home
   - End
@@ -114,18 +114,18 @@ layers:
   - '7'
   - '8'
   - '9'
-  - {t: ',', s: ;}
-  - _
-  - '-'
-  - {t: (, s: <}
-  - {t: ), s: '>'}
+  - ','
+  - ''
+  - ''
+  - select line
+  - email
   - ''
   - '0'
   - '4'
   - '5'
   - '6'
-  - {t: ., s: ':'}
-  - '~'
+  - .
+  - ''
   - Shift
   - Ctrl
   - Alt
@@ -136,12 +136,49 @@ layers:
   - '2'
   - '3'
   - ⌫
-  - $
+  - ''
   - =>
-  - select line
-  - email
+  - ''
+  - ''
   - ''
   - ⏎
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SYM:
+  - '%'
+  - +
+  - '{'
+  - '}'
+  - ^
+  - _
+  - '"'
+  - '&'
+  - ''
+  - \
+  - '!'
+  - '='
+  - (
+  - )
+  - '#'
+  - '-'
+  - ''''
+  - '|'
+  - $
+  - ''
+  - ''
+  - ''
+  - '*'
+  - '['
+  - ']'
+  - '~'
+  - '`'
+  - '@'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -178,9 +215,9 @@ layers:
   - KP NUM
   - ''
   - ''
-  - {t: ⏭️, type: held}
+  - {type: held}
+  - ⏭️
   - ⏯
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
