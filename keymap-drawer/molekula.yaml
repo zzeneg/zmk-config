@@ -36,6 +36,43 @@ layers:
   - ⏎
   - {t: ⌫, h: NAV}
   - {t: ⌦, h: EU}
+  GAME:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Q, h: Alt}
+  - A
+  - S
+  - D
+  - F
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ;, h: Gui}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: C, h: Ctrl}
+  - {t: V, h: Shift}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   EU:
   - {t: ▽, type: trans}
   - Ę
@@ -193,7 +230,7 @@ layers:
   - Print Screen
   - SLCK
   - Pause Break
-  - ''
+  - {t: GAME, h: toggle}
   - Ctrl
   - F4
   - F5
