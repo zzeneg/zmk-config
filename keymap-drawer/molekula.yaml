@@ -155,7 +155,7 @@ layers:
   - ''
   - ''
   - select line
-  - email
+  - ''
   - ''
   - '0'
   - '4'
@@ -277,7 +277,7 @@ layers:
   - Out BLE
   - ''
   - ''
-  - ''
+  - BT 5
   - BT clear
   - ''
   - ''
