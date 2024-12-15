@@ -1,7 +1,7 @@
 # Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_NICE_VIEW
+if SHIELD_NICE_VIEW_CUSTOM
 
 config LV_Z_VDB_SIZE
     default 100
