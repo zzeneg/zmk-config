@@ -1,7 +1,10 @@
 if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
-  zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
-  zephyr_library_sources(custom_status_screen.c)
-  zephyr_library_sources(widgets/bolt.c)
-  zephyr_library_sources(widgets/util.c)
+  zephyr_include_directories(${APPLICATION_SOURCE_DIR}/boards/shields/nice_view/widgets)
+
+  set_source_files_properties(
+    ${APPLICATION_SOURCE_DIR}/boards/shields/nice_view/widgets/status.c
+    TARGET_DIRECTORY zephyr
+    PROPERTIES HEADER_FILE_ONLY ON)
+ 
   zephyr_library_sources(widgets/status.c)
 endif()
