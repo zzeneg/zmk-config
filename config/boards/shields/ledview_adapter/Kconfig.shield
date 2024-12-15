@@ -1,0 +1,2 @@
+config SHIELD_LEDVIEW_ADAPTER
+    def_bool $(shields_list_contains,ledview_adapter)
