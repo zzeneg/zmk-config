@@ -17,4 +17,7 @@ include:
     shield: molekula nice_view_adapter nice_view
 
   - board: nice_nano_v2
+    shield: molekula ledview_adapter
+
+  - board: nice_nano_v2
     shield: settings_reset
