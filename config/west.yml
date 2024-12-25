@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: zzeneg
+      url-base: https://github.com/zzeneg
     - name: caksoylar
       url-base: https://github.com/caksoylar
   projects:
@@ -9,6 +11,12 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-raw-hid
+      remote: zzeneg
+      revision: main
+    - name: zmk-nice-view-hid
+      remote: zzeneg
+      revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main

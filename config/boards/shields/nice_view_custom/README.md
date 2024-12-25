@@ -1,1 +1,0 @@
-# nice!view custom widget
