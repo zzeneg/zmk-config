@@ -17,8 +17,8 @@ manifest:
     - name: zmk-nice-view-hid
       remote: zzeneg
       revision: main
-    - name: zmk-rgbled-widget
-      remote: caksoylar
+    - name: zmk-led-view-widget
+      remote: zzeneg
       revision: main
   self:
     path: config
