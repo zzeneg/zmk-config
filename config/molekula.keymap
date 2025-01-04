@@ -29,10 +29,6 @@
     tapping-term-ms = <150>;
 };
 
-&encoder {
-    status = "okay";
-};
-
 / {
     behaviors {
         hrs: homerow_shift {

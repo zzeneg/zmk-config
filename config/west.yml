@@ -11,6 +11,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-molekula
+      remote: zzeneg
+      revision: main
     - name: zmk-raw-hid
       remote: zzeneg
       revision: main
