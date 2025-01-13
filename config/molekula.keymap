@@ -99,6 +99,12 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+
+        m_email: m_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp Z  &kp E &kp N &kp E &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+        };
     };
 
     combos {
@@ -119,7 +125,7 @@
 
             bindings = <
                                        &kp W         &kp E          &kp R         &kp T            &kp Y    &kp U         &kp I          &kp O
-                &kp Q    &hrml LGUI A  &hrml LALT S  &hrcl LCTRL D  &hrs LSHFT F  &kp G            &kp H    &hrs RSHFT J  &hrcr RCTRL K  &hrmr LALT L  &hrmr RGUI P  &kp SEMI
+                &kp Q    &hrml LGUI A  &hrml LALT S  &hrcl LCTRL D  &hrs LSHFT F  &kp G            &kp H    &hrs RSHFT J  &hrcr RCTRL K  &hrmr LALT L  &kp P       &kp SEMI
                          &kp Z         &kp X         &kp C          &kp V         &kp B            &kp N    &kp M         &kp COMMA      &kp DOT       &kp SLASH
                                                  &lt FUNC ESC  &lt SYM SPACE  &lt NUM TAB        &kp ENTER  &lt NAV BSPC  &lt EU DEL
             >;
@@ -166,21 +172,21 @@
             display-name = "NUM";
 
             bindings = <
-                                       &kp N7      &kp N8      &kp N9      &kp COMMA          &none      &none        &m_sl       &none
-                 &none      &kp N0     &kp N4      &kp N5      &kp N6      &kp DOT            &none      &kp RSHFT    &kp RCTRL   &kp LALT   &kp RGUI     &none
-                            &none      &kp N1      &kp N2      &kp N3      &kp BSPC           &none      &m_arrow     &none       &none      &none
-                                                      &kp ENTER     &trans     &trans       &trans      &trans     &trans
+                                      &kp N7      &kp N8      &kp N9      &kp COMMA          &none      &none        &m_sl       &m_email
+                &none      &kp N0     &kp N4      &kp N5      &kp N6      &kp DOT            &none      &kp RSHFT    &kp RCTRL   &kp LALT   &kp RGUI     &none
+                           &kp MINUS  &kp N1      &kp N2      &kp N3      &kp PLUS           &none      &m_arrow     &none       &none      &none
+                                                     &kp ENTER     &trans     &trans       &trans      &trans     &trans
             >;
         };
 
         sym_layer {
-            display-name = "SYM"; 
+            display-name = "SYM";
 
             bindings = < 
-                                     &kp PRCNT   &kp PLUS    &kp LBRC    &kp RBRC         &kp CARET  &kp UNDER    &kp DQT    &kp AMPS
-                &none    &kp BSLH    &kp EXCL    &kp EQUAL   &kp LPAR    &kp RPAR         &kp HASH   &kp MINUS    &kp SQT    &kp PIPE     &kp DLLR     &none
-                         &none       &none       &kp STAR    &kp LBKT    &kp RBKT         &kp TILDE  &kp GRAVE    &kp AT     &none        &none
-                                                     &trans     &trans     &trans       &trans      &trans     &trans
+                                   &kp PRCNT   &kp PLUS    &kp LBRC    &kp RBRC         &kp CARET  &kp UNDER    &kp DQT    &kp AMPS
+                &none    &none     &kp EXCL    &kp EQUAL   &kp LPAR    &kp RPAR         &kp DLLR   &kp MINUS    &kp SQT    &kp PIPE     &none     &none
+                         &none     &kp BSLH    &kp STAR    &kp LBKT    &kp RBKT         &kp TILDE  &kp GRAVE    &kp AT     &kp HASH     &none
+                                                  &kp BSPC    &trans     &trans       &trans      &trans     &trans
             >;
         };
 
@@ -189,9 +195,9 @@
 
             bindings = <
                                        &kp F7      &kp F8      &kp F9      &kp F11             &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK
-                &tog GAME  &kp LCTRL   &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT         &kp RGUI    &none
+                &none      &kp LCTRL   &kp F4      &kp F5      &kp F6      &kp F12             &none        &kp RSHFT    &kp RCTRL    &kp LALT         &kp RGUI    &none
                            &none       &kp F1      &kp F2      &kp F3      &kp F10             &none        &kp CAPS     &kp KP_NUM   &none            &none
-                                                 &trans     &kp C_NEXT     &kp C_PP        &trans      &trans     &trans
+                                                 &trans     &kp C_NEXT     &kp C_PP        &trans      &trans     &tog GAME
             >;
         };
 
