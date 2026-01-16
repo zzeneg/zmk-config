@@ -20,7 +20,7 @@ manifest:
     - name: zmk-nice-view-hid
       remote: zzeneg
       revision: main
-    - name: zmk-led-view-widget
+    - name: zmk-component-underdongle
       remote: zzeneg
       revision: main
   self:
