@@ -18,6 +18,11 @@ include:
     artifact-name: molekula_nice_view_hid
 
   - board: nice_nano_v2
+    shield: molekula nice_view_adapter nice_view_hid_adapter raw_hid_adapter
+    cmake-args: -DCONFIG_NICE_VIEW_HID_HORIZONTAL=y
+    artifact-name: molekula_nice_view_hid_horizontal
+
+  - board: nice_nano_v2
     shield: molekula
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: molekula_dongle_kb
