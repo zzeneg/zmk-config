@@ -6,10 +6,12 @@ manifest:
       url-base: https://github.com/zzeneg
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: aleblazer
+      url-base: https://github.com/Aleblazer
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: zmk-molekula
       remote: zzeneg
@@ -17,11 +19,11 @@ manifest:
     - name: zmk-raw-hid
       remote: zzeneg
       revision: main
-    - name: zmk-nice-view-hid
+    - name: prospector-zmk-module
       remote: zzeneg
-      revision: main
-    - name: zmk-component-underdongle
-      remote: zzeneg
+      revision: feat/nv3007-wide-port
+    - name: zmk-nv3007-display
+      remote: aleblazer
       revision: main
   self:
     path: config
